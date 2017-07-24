@@ -3,14 +3,12 @@ package com.nokia.oss.sdm.tools.dumi;
 import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
 import com.nokia.oss.sdm.tools.dumi.context.Constants;
 import com.nokia.oss.sdm.tools.dumi.inspector.SpellingInspectorFactory;
-import com.nokia.oss.sdm.tools.dumi.report.Environment;
+import com.nokia.oss.sdm.tools.dumi.report.model.Environment;
 import com.nokia.oss.sdm.tools.dumi.report.ReportBuilder;
-import com.nokia.oss.sdm.tools.dumi.report.TypoInspectionDataModel;
+import com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel;
 import com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector;
-import com.nokia.oss.sdm.tools.dumi.report.ReportStatistics;
+import com.nokia.oss.sdm.tools.dumi.report.model.ReportStatistics;
 import com.nokia.oss.sdm.tools.dumi.util.FileUtil;
-import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
-import opennlp.tools.parser.Cons;
 
 import java.io.IOException;
 import java.util.*;
@@ -22,7 +20,7 @@ public class SpellChecker
 {
     public static void printHelp ()
     {
-        System.out.println("java -jar xxx.jar <scanningFolder> [ignoredWordFile]");
+        System.out.println("java -jar dumi.jar <scanningFolder> [ignoredWordFile.txt]");
     }
 
     public static void main (String[] args) throws IOException
@@ -30,6 +28,7 @@ public class SpellChecker
         if (args.length < 1)
         {
             printHelp();
+            return;
         }
 
         String scanFolder = args[0]; //"D:\\Workspace\\SVN\\adaptations\\com.nsn.hp.hphw";

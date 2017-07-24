@@ -1,13 +1,10 @@
 package com.nokia.oss.sdm.tools.dumi.inspector;
 
 import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
-import com.nokia.oss.sdm.tools.dumi.report.TypoInspectionDataModel;
-import static com.nokia.oss.sdm.tools.dumi.report.TypoInspectionDataModel.ErrorItem;
+import com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel;
+import static com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel.ErrorItem;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
-import org.languagetool.JLanguageTool;
-import org.languagetool.language.BritishEnglish;
-import org.languagetool.language.English;
 import org.languagetool.rules.RuleMatch;
 import org.languagetool.rules.UppercaseSentenceStartRule;
 
@@ -24,7 +21,7 @@ public abstract class AbstractSpellingInspector
 
     public TypoInspectionDataModel process (String file)
     {
-        LOGGER.info("Processing file " + file);
+        LOGGER.info("Processing file '" + file + "'");
         try
         {
             return doProcess(file);

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/tools-dumi.iml" filepath="$PROJECT_DIR$/tools-dumi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dumi.iml" filepath="$PROJECT_DIR$/dumi.iml" />
     </modules>
   </component>
 </project>

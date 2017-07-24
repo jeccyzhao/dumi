@@ -210,8 +210,7 @@ public abstract class AbstractXmlParser
             throw new RuntimeException("The given xml file does not exist," + xmlFile);
         }
 
-        LOGGER.info("Parsing cmb file: `" + xmlFile.getPath() + "`");
-
+        LOGGER.debug("Parsing file: `" + xmlFile.getPath() + "`");
         return doParse();
     }
 

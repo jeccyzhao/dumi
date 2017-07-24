@@ -1,9 +1,12 @@
 package com.nokia.oss.sdm.tools.dumi.report;
 
+import com.nokia.oss.sdm.tools.dumi.context.Constants;
+import com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector;
 import com.nokia.oss.sdm.tools.dumi.util.DateUtil;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
+import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -16,6 +19,8 @@ import java.util.Map;
  */
 public class ReportBuilder
 {
+    private static final Logger LOGGER = Logger.getLogger(AbstractSpellingInspector.class);
+
     public String buildReport (String templateFile,  Map<String, Object> dataModel)
     {
         FileWriter out = null;
@@ -24,14 +29,17 @@ public class ReportBuilder
         config.setClassForTemplateLoading(ReportBuilder.class, "/template");
         try
         {
+            String htmlFile = Constants.REPORT_FILE_NAME + "_" + DateUtil.parseTime(new Date())+ ".html";
             Template template = config.getTemplate("report.tpl");
-            File outputFile = new File("dumiReport_" + DateUtil.parseTime(new Date())+ ".html");
+            File outputFile = new File(htmlFile);
             if (!outputFile.exists())
             {
                 outputFile.createNewFile();
             }
             out = new FileWriter(outputFile);
             template.process(dataModel, out);
+
+            LOGGER.info("Report file is created as '" + htmlFile + "'");
         }
         catch (IOException e)
         {

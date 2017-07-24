@@ -4,7 +4,7 @@ import com.nokia.oss.o2ml.metadata.fragment.BaseFragment;
 import com.nokia.oss.o2ml.metadata.fragment.parser.AbstractXmlParser;
 import com.nokia.oss.o2ml.metadata.fragment.parser.FragmentParserFactory;
 import com.nokia.oss.sdm.tools.dumi.annotation.TypoInspection;
-import com.nokia.oss.sdm.tools.dumi.report.TypoInspectionDataModel;
+import com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel;
 import com.nokia.oss.sdm.tools.dumi.util.AnnotationUtil;
 import org.apache.log4j.Logger;
 
@@ -12,8 +12,8 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.nokia.oss.sdm.tools.dumi.report.TypoInspectionDataModel.Label;
-import static com.nokia.oss.sdm.tools.dumi.report.TypoInspectionDataModel.ErrorItem;
+import static com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel.Label;
+import static com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel.ErrorItem;
 
 /**
  * Created by x36zhao on 2017/7/21.
@@ -29,9 +29,12 @@ public class FragmentSpellingInspector extends AbstractSpellingInspector
         {
             TypoInspectionDataModel dataModel = new TypoInspectionDataModel(file);
             BaseFragment fragment = parser.parse(file);
-            dataModel.setLabels(checkFragment(fragment));
-            dataModel.setCategory(fragment.getId());
-            return dataModel;
+            if (fragment != null)
+            {
+                dataModel.setLabels(checkFragment(fragment));
+                dataModel.setCategory(fragment.getId());
+                return dataModel;
+            }
         }
 
         return null;

@@ -1,6 +1,6 @@
 package com.nokia.oss.sdm.tools.dumi.inspector;
 
-import com.nokia.oss.sdm.tools.dumi.report.TypoInspectionDataModel;
+import com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel;
 
 /**
  * Created by x36zhao on 2017/7/23.

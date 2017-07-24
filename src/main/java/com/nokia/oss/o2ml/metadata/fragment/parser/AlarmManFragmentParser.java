@@ -5,6 +5,7 @@ import com.nokia.oss.o2ml.metadata.fragment.AlarmManPageFragment;
 import com.nokia.oss.o2ml.metadata.fragment.CommonFragment;
 import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
 import com.nokia.oss.sdm.tools.dumi.context.Constants;
+import org.apache.log4j.Logger;
 import org.w3c.dom.Node;
 
 import java.io.File;
@@ -14,6 +15,11 @@ import java.io.File;
  */
 public class AlarmManFragmentParser extends AbstractXmlParser
 {
+    /**
+     * The LOGGER
+     */
+    protected static final Logger LOGGER = Logger.getLogger(AlarmManFragmentParser.class);
+
     /**
      * The sole constructor
      *
@@ -43,6 +49,7 @@ public class AlarmManFragmentParser extends AbstractXmlParser
                 {
                     if (id.equals(commonFragment.getAdaptationId()))
                     {
+                        LOGGER.info("Processing file '" + xmlFile.getPath() + "' is discarded as '" + id + "' is in ignored id list");
                         isIgnored = true;
                         break;
                     }

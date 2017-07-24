@@ -1,7 +1,5 @@
 package com.nokia.oss.sdm.tools.dumi.util;
 
-import jdk.internal.util.xml.impl.Input;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;

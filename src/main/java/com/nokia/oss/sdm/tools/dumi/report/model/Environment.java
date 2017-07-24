@@ -1,4 +1,4 @@
-package com.nokia.oss.sdm.tools.dumi.report;
+package com.nokia.oss.sdm.tools.dumi.report.model;
 
 import lombok.Data;
 
