@@ -29,6 +29,16 @@ public class TypoInspectionDataModel
         }
     }
 
+    public void addLabel (Label label)
+    {
+        if (labels == null)
+        {
+            labels = new ArrayList<Label>();
+        }
+
+        labels.add(label);
+    }
+
     public boolean isHasError()
     {
         if (labels != null && labels.size() > 0)

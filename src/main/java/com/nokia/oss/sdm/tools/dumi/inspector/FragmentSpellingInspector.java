@@ -64,7 +64,7 @@ public class FragmentSpellingInspector extends AbstractSpellingInspector
             }
             catch (Exception e)
             {
-                LOGGER.warn("Failed to processing filed " + field.getName(), e);
+                LOGGER.warn("Failed to process filed " + field.getName(), e);
             }
         }
 

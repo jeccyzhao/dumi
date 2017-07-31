@@ -31,7 +31,7 @@ public class SpellChecker
             return;
         }
 
-        String scanFolder = args[0]; //"D:\\Workspace\\SVN\\adaptations\\com.nsn.hp.hphw";
+        String scanFolder = args[0];
         String customizedIgnoredWordsFile = null;
         if (args.length > 1)
         {
@@ -39,7 +39,7 @@ public class SpellChecker
             ApplicationContext.getInstance().addIgnoredWords(customizedIgnoredWordsFile, false);
         }
 
-        List<String> filesToProcess = FileUtil.listFiles(scanFolder, new String[] {".man"});
+        List<String> filesToProcess = FileUtil.listFiles(scanFolder, new String[] { ".man", ".txt", ".log" });
 
         Map<String, ReportStatistics> dataMap = null;
         if (filesToProcess.size() > 0)

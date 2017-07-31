@@ -8,6 +8,11 @@
     <artifactId>dumi</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <java.version>1.8</java.version>
+        <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.languagetool</groupId>
@@ -27,6 +32,28 @@
             <version>1.2.17</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/net.sf.jazzy/jazzy -->
+        <dependency>
+            <groupId>net.sf.jazzy</groupId>
+            <artifactId>jazzy-core</artifactId>
+            <version>0.5.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
         <dependency>
             <groupId>org.freemarker</groupId>
@@ -38,6 +65,17 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <testSource>${java.version}</testSource>
+                    <testTarget>${java.version}</testTarget>
+                </configuration>
+                <version>${maven-compiler-plugin.version}</version>
+            </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <executions>

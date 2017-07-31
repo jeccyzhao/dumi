@@ -1,5 +1,8 @@
 package com.nokia.oss.sdm.tools.dumi.util;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.LineIterator;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,17 +23,32 @@ public class FileUtil
             {
                 inputStream = FileUtil.class.getResourceAsStream("/" + file);
                 reader = new BufferedReader(new InputStreamReader(inputStream));
+                String line = null;
+                while ((line = reader.readLine()) != null)
+                {
+                    lines.add(line);
+                }
             }
             else
             {
-                reader = new BufferedReader(new FileReader(file));
+                //BufferedInputStream bis = new BufferedInputStream(new FileInputStream(new File(file)));
+                //reader = new BufferedReader(new InputStreamReader(bis, "utf-8"), 10 * 1024 * 1024);
+                LineIterator it = FileUtils.lineIterator(new File(file), "UTF-8");
+                try
+                {
+                    while (it.hasNext())
+                    {
+                        String line = it.nextLine();
+                        lines.add(line);
+                        System.out.println(line);
+                    }
+                }
+                finally
+                {
+                    LineIterator.closeQuietly(it);
+                }
             }
 
-            String line = null;
-            while ((line = reader.readLine()) != null)
-            {
-                lines.add(line);
-            }
         }
         catch (IOException e)
         {
@@ -51,6 +69,17 @@ public class FileUtil
         }
 
         return lines;
+    }
+
+    public static String getFileName (String file)
+    {
+        File fos = new File(file);
+        if (fos.exists())
+        {
+            return fos.getName();
+        }
+
+        return null;
     }
 
     public static List<String> listFiles (String filePath, final String[] fileSuffixes)
