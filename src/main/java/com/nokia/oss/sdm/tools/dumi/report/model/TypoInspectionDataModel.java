@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -57,7 +58,7 @@ public class TypoInspectionDataModel
 
 
     @Data
-    public static class Label
+    public static class Label implements Comparator<Label>
     {
         private String label;
         private String rawText;
@@ -99,6 +100,12 @@ public class TypoInspectionDataModel
             }
 
             return rawText;
+        }
+
+        @Override
+        public int compare (Label o1, Label o2)
+        {
+            return o1.getLabel().compareTo(o2.getLabel());
         }
     }
 

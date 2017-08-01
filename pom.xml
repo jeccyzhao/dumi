@@ -90,7 +90,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.nokia.oss.sdm.tools.dumi.SpellChecker</mainClass>
+                            <mainClass>com.nokia.oss.sdm.tools.dumi.DumiInspector</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

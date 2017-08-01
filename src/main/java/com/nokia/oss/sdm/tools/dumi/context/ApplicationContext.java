@@ -2,6 +2,7 @@ package com.nokia.oss.sdm.tools.dumi.context;
 
 import com.nokia.oss.sdm.tools.dumi.util.FileUtil;
 import org.languagetool.JLanguageTool;
+import org.languagetool.Language;
 import org.languagetool.language.BritishEnglish;
 import org.languagetool.rules.Rule;
 import org.languagetool.rules.spelling.SpellingCheckRule;
@@ -17,6 +18,7 @@ public class ApplicationContext
 {
     public static ApplicationContext instance = new ApplicationContext();
 
+    private Language lang = new BritishEnglish();
     private JLanguageTool langTool = new JLanguageTool(new BritishEnglish());
     private List<String> acceptedPhrases = new ArrayList<String>();
 
@@ -25,6 +27,11 @@ public class ApplicationContext
     private ApplicationContext ()
     {
         loadAssembly();
+    }
+
+    public Language getLanguage()
+    {
+        return lang;
     }
 
     public JLanguageTool getLangTool ()

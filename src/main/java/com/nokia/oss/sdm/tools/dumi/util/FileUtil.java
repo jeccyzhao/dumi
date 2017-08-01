@@ -40,7 +40,6 @@ public class FileUtil
                     {
                         String line = it.nextLine();
                         lines.add(line);
-                        System.out.println(line);
                     }
                 }
                 finally

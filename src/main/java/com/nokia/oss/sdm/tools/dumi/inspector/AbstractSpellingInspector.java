@@ -3,11 +3,18 @@ package com.nokia.oss.sdm.tools.dumi.inspector;
 import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
 import com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel;
 import static com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel.ErrorItem;
+
+import com.nokia.oss.sdm.tools.dumi.spellchecker.SpellCheckerManager;
+import com.nokia.oss.sdm.tools.dumi.spellchecker.inspections.PlainTextSplitter;
+import com.nokia.oss.sdm.tools.dumi.spellchecker.jazzy.JazzySpellChecker;
+import com.nokia.oss.sdm.tools.dumi.spellchecker.util.TextRange;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
+import org.languagetool.JLanguageTool;
 import org.languagetool.rules.RuleMatch;
 import org.languagetool.rules.UppercaseSentenceStartRule;
 
+import javax.xml.soap.Text;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,9 +44,14 @@ public abstract class AbstractSpellingInspector
 
     protected List<ErrorItem> inspectText (String text) throws IOException
     {
+        return inspectText(text, new JLanguageTool(ApplicationContext.getInstance().getLanguage()));
+    }
+
+    protected List<ErrorItem> inspectText (String text, JLanguageTool languageTool) throws IOException
+    {
         if (text != null && !"".equals(text))
         {
-            List<RuleMatch> matches = ApplicationContext.getInstance().getLangTool().check(text.toLowerCase());
+            List<RuleMatch> matches = languageTool.check(text.toLowerCase());
             if (matches.size() > 0)
             {
                 List<ErrorItem> potentialErrorItems = new ArrayList<ErrorItem>();
@@ -51,8 +63,27 @@ public abstract class AbstractSpellingInspector
                         potentialErrorItems.add(errorItem);
                     }
                 }
+                matches.clear();
                 return potentialErrorItems;
             }
+
+            //JazzySpellChecker spellChecker = new JazzySpellChecker();
+            //spellChecker.check(text);
+            //System.out.println(spellChecker.check(text));
+
+            /*
+            System.out.println(text);
+            List<String> words = new ArrayList<>();
+            PlainTextSplitter.getInstance().split(text, TextRange.allOf(text), words);
+            for (String word : words)
+            {
+                List<String> suggestions = SpellCheckerManager.getInstance().getSuggestions(word);
+                if (suggestions != null && suggestions.get(0) != null)
+                {
+                    System.out.println(word + " --> " + suggestions);
+                }
+            }
+            */
         }
 
         return null;
