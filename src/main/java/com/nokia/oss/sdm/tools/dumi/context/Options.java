@@ -20,6 +20,9 @@ public final class Options
     @OptionArgument(attribute = "-d")
     private String userDictionary;
 
+    @OptionArgument(attribute = "-r")
+    private String regexPatternRuleFile;
+
     @OptionArgument(attribute = "-s")
     private String plainTextSplitter;
 

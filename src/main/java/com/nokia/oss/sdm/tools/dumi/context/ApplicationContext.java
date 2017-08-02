@@ -43,6 +43,22 @@ public class ApplicationContext
         {
             addIgnoredWords(userDictionary, false);
         }
+
+        String regexPatternRuleFile = this.options.getRegexPatternRuleFile();
+        if (regexPatternRuleFile != null && !"".equals(regexPatternRuleFile))
+        {
+            for (FilterRule filterRule : filterRules)
+            {
+                if (filterRule instanceof RegexPatternFilterRule)
+                {
+                    List<String> rules = FileUtil.getFileContent(regexPatternRuleFile);
+                    for (String rule : rules)
+                    {
+                        filterRule.addRule(rule);
+                    }
+                }
+            }
+        }
     }
 
     private ResourceBundle resource;
@@ -87,9 +103,6 @@ public class ApplicationContext
     public void loadAssembly()
     {
         resource = ResourceBundle.getBundle("assembly");
-
-        // replaced by filter rule
-        //addIgnoredWords(resource.getString(Constants.propIgnoredBuiltInWords), true);
     }
 
     public String getProperty (String propName)
