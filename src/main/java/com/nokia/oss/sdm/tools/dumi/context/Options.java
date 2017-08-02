@@ -3,6 +3,7 @@ package com.nokia.oss.sdm.tools.dumi.context;
 import com.nokia.oss.sdm.tools.dumi.annotation.OptionArgument;
 import com.nokia.oss.sdm.tools.dumi.util.AnnotationUtil;
 import lombok.Data;
+import org.apache.log4j.Logger;
 
 import java.lang.reflect.Field;
 import java.util.List;
@@ -14,6 +15,9 @@ import java.io.File;
 @Data
 public final class Options
 {
+    private static int DEFAULT_THREAD_THRESHOLD = 2;
+    private static final Logger LOGGER = Logger.getLogger(Options.class);
+
     @OptionArgument(attribute = "-f")
     private String scanFolder;
 
@@ -26,8 +30,32 @@ public final class Options
     @OptionArgument(attribute = "-s")
     private String plainTextSplitter;
 
+    @OptionArgument(attribute = "-t")
+    private int threadThreshold;
+
     public Options ()
     {
+    }
+
+    public int getThreadThreshold()
+    {
+        if (threadThreshold < 1)
+        {
+            String configuredThreshold = ApplicationContext.getInstance().getProperty(Constants.propThreadThreshold);
+            if (configuredThreshold != null)
+            {
+                try
+                {
+                    threadThreshold = Integer.valueOf(configuredThreshold);
+                }
+                catch (Exception ex)
+                {
+                    threadThreshold = DEFAULT_THREAD_THRESHOLD;
+                }
+            }
+        }
+
+        return threadThreshold;
     }
 
     public boolean isValid ()
@@ -67,9 +95,11 @@ public final class Options
                             field.set(options, argValue);
                             ++i;
                         }
-                        catch (IllegalAccessException e)
+                        catch (Exception e)
                         {
+                            LOGGER.warn("Failed to set field (" + field + ") when creating option", e);
                         }
+
                         break;
                     }
                 }

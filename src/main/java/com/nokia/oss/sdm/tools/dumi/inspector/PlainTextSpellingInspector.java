@@ -17,19 +17,19 @@ import java.util.concurrent.*;
  */
 public class PlainTextSpellingInspector extends AbstractSpellingInspector
 {
-    private static final int MAX_THREAD_THRESHOLD = 2;
     private static final Logger LOGGER = Logger.getLogger(PlainTextSpellingInspector.class);
 
     public TypoInspectionDataModel doProcess (String file) throws Exception
     {
+        int threadThreshold = ApplicationContext.getInstance().getOptions().getThreadThreshold();
         TypoInspectionDataModel dataModel = new TypoInspectionDataModel(file);
         dataModel.setPlainText(true);
 
         List<String> lines = FileUtil.getFileContent(file, false);
         long startTime = System.currentTimeMillis();
-        int seed = lines.size() / MAX_THREAD_THRESHOLD;
+        int seed = lines.size() / threadThreshold;
         int linePerThread = seed > 0 ? seed : -1;
-        int threadNum = linePerThread > 0 ? MAX_THREAD_THRESHOLD : 1;
+        int threadNum = linePerThread > 0 ? threadThreshold : 1;
         ExecutorService exec = Executors.newFixedThreadPool(threadNum);
         List<Future<List<Label>>> executionFeedbacks = new ArrayList<>();
         for (int i = 0; i < threadNum; i++)
@@ -63,7 +63,7 @@ public class PlainTextSpellingInspector extends AbstractSpellingInspector
         Label labelEntry = new Label(String.valueOf(lineNum), line);
         try
         {
-            List<TypoInspectionDataModel.ErrorItem> errorItems = inspectText(line, lanTool, transform);
+            List<TypoInspectionDataModel.ErrorItem> errorItems = inspectText(line, lanTool, transform, 0);
             if (errorItems != null && errorItems.size() > 0)
             {
                 labelEntry.setErrorItems(errorItems);

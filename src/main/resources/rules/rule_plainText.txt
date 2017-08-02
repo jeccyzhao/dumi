@@ -6,8 +6,8 @@ CONFIG
 PXE
 IO
 SYSLOG
-#FlexFabric
-#Cmdr
+FlexFabric
+Cmdr
 GRP
 iLO
 OK
@@ -31,3 +31,8 @@ DN
 FQDN
 csv
 ZMVI
+NetAct
+VM
+MF
+TLS
+MO
