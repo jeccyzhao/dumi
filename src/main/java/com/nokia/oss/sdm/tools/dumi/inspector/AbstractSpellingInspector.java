@@ -42,22 +42,61 @@ public abstract class AbstractSpellingInspector
 
     public abstract TypoInspectionDataModel doProcess (String file) throws Exception;
 
-    protected List<ErrorItem> inspectText (String text) throws IOException
+    private String transform (String text)
     {
-        return inspectText(text, new JLanguageTool(ApplicationContext.getInstance().getLanguage()));
+        String textSplitter = ApplicationContext.getInstance().getOptions().getPlainTextSplitter();
+        if (textSplitter != null && !"".equals(text))
+        {
+            String[] entries = textSplitter.split(",");
+            if (entries.length > 1)
+            {
+                try
+                {
+                    String splitter = escapeString(entries[0]);
+                    int splitIndex = Integer.valueOf(entries[1]);
+                    String[] strs = text.split(splitter);
+                    if (strs.length > splitIndex)
+                    {
+                        return strs[splitIndex];
+                    }
+                }
+                catch (Exception e)
+                {
+                }
+            }
+        }
+
+        return text;
     }
 
-    protected List<ErrorItem> inspectText (String text, JLanguageTool languageTool) throws IOException
+    private String escapeString (String text)
+    {
+        text = text.indexOf("|") > -1 ? text.replaceAll("\\|", "\\\\|") : text;
+        text = text.indexOf(".") > -1 ? text.replaceAll("\\.", "\\\\.") : text;
+        text = text.indexOf("*") > -1 ? text.replaceAll("\\*", "\\\\*") : text;
+        text = text.indexOf("?") > -1 ? text.replaceAll("\\?", "\\\\?") : text;
+        text = text.indexOf("^") > -1 ? text.replaceAll("\\^", "\\\\^") : text;
+        text = text.indexOf(":") > -1 ? text.replaceAll("\\:", "\\\\:") : text;
+        return text;
+    }
+
+    protected List<ErrorItem> inspectText (String text) throws IOException
+    {
+        return inspectText(text, new JLanguageTool(ApplicationContext.getInstance().getLanguage()), false);
+    }
+
+    protected List<ErrorItem> inspectText (String text, JLanguageTool languageTool, boolean transform) throws IOException
     {
         if (text != null && !"".equals(text))
         {
-            List<RuleMatch> matches = languageTool.check(text.toLowerCase());
+            String transformedText = transform ? transform(text) : text;
+            List<RuleMatch> matches = languageTool.check(transformedText.toLowerCase());
             if (matches.size() > 0)
             {
                 List<ErrorItem> potentialErrorItems = new ArrayList<ErrorItem>();
                 for (RuleMatch match : matches)
                 {
-                    ErrorItem errorItem = buildErrorItem(match, text);
+                    ErrorItem errorItem = buildErrorItem(match, text, transformedText);
                     if (errorItem != null)
                     {
                         potentialErrorItems.add(errorItem);
@@ -66,36 +105,18 @@ public abstract class AbstractSpellingInspector
                 matches.clear();
                 return potentialErrorItems;
             }
-
-            //JazzySpellChecker spellChecker = new JazzySpellChecker();
-            //spellChecker.check(text);
-            //System.out.println(spellChecker.check(text));
-
-            /*
-            System.out.println(text);
-            List<String> words = new ArrayList<>();
-            PlainTextSplitter.getInstance().split(text, TextRange.allOf(text), words);
-            for (String word : words)
-            {
-                List<String> suggestions = SpellCheckerManager.getInstance().getSuggestions(word);
-                if (suggestions != null && suggestions.get(0) != null)
-                {
-                    System.out.println(word + " --> " + suggestions);
-                }
-            }
-            */
         }
 
         return null;
     }
 
-    private ErrorItem buildErrorItem (final RuleMatch ruleMatch, final String text)
+    private ErrorItem buildErrorItem (final RuleMatch ruleMatch, final String rawText, final String transformedText)
     {
         if (ruleMatch != null)
         {
             int fromPos = ruleMatch.getFromPos();
             int toPos = ruleMatch.getToPos();
-            String errorWord = text.substring(fromPos, toPos);
+            String errorWord = transformedText.substring(fromPos, toPos);
 
             boolean trackError = true;
             if (ruleMatch.getRule() instanceof UppercaseSentenceStartRule)
@@ -111,8 +132,19 @@ public abstract class AbstractSpellingInspector
             if (trackError)
             {
                 ErrorItem errorItem = new ErrorItem();
-                errorItem.setErrorStartPos(fromPos);
-                errorItem.setErrorEndPos(toPos);
+
+                if (transformedText.equals(rawText))
+                {
+                    errorItem.setErrorStartPos(fromPos);
+                    errorItem.setErrorEndPos(toPos);
+                }
+                else
+                {
+                    int prefixLen = rawText.indexOf(transformedText);
+                    errorItem.setErrorStartPos(fromPos + prefixLen);
+                    errorItem.setErrorEndPos(toPos + prefixLen);
+                }
+
                 errorItem.setErrorDescription(ruleMatch.getMessage());
                 errorItem.setSuggestReplacements(StringUtils.join(ruleMatch.getSuggestedReplacements().toArray(), ","));
                 errorItem.setErrorWord(errorWord);

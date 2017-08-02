@@ -69,8 +69,8 @@ public class ApplicationContext
 
     public void addIgnoredWords (String file, boolean isBuiltIn)
     {
-        List<String> ignoredWords = buildAcceptedPhrasesFromFile(file, isBuiltIn);
-        addIgnoredWordsToLangTool(ignoredWords);
+        this.acceptedPhrases.addAll(buildAcceptedPhrasesFromFile(file, isBuiltIn));
+        addIgnoredWordsToLangTool(acceptedPhrases);
     }
 
     public List<String> getAcceptedPhrases()
@@ -80,9 +80,14 @@ public class ApplicationContext
 
     private void addIgnoredWordsToLangTool (List<String> acceptedPhrases)
     {
+        addIgnoredWordsToLangTool(acceptedPhrases, langTool);
+    }
+
+    public void addIgnoredWordsToLangTool (List<String> acceptedPhrases, JLanguageTool languageTool)
+    {
         if (acceptedPhrases != null && acceptedPhrases.size() > 0)
         {
-            for (Rule rule : langTool.getAllActiveRules())
+            for (Rule rule : languageTool.getAllActiveRules())
             {
                 if (rule instanceof SpellingCheckRule)
                 {
@@ -91,6 +96,11 @@ public class ApplicationContext
                 }
             }
         }
+    }
+
+    public void addIgnoredWordsToLangTool (JLanguageTool languageTool)
+    {
+        addIgnoredWordsToLangTool(this.acceptedPhrases, languageTool);
     }
 
     private List<String> buildAcceptedPhrasesFromFile (String file, boolean isBuiltIn)

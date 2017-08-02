@@ -52,43 +52,18 @@ public class PlainTextSpellingInspector extends AbstractSpellingInspector
 
         exec.shutdown();
 
-        LOGGER.info("File processed successfully within " + (System.currentTimeMillis() - startTime) / 1000 + " s");
-
-        // countDownLatch.await();
-
-        /*
-        ForkJoinPool forkjoinPool = new ForkJoinPool();
-        InspectTask inspectTask = new InspectTask(this, lines, threshold);
-        Future<List<Label>> result = forkjoinPool.submit(inspectTask);
-        result.get();
-        System.out.println((System.currentTimeMillis() - start) / 1000 + " s");
-        dataModel.getLabels().addAll(result.get());
-        System.out.println((System.currentTimeMillis() - start) / 1000 + " s");
-        */
-
-        /*
-        int lineNum = 0;
-
-        for (int i = 0; i < lines.size(); i++)
-        {
-            System.out.println("Processing line-" + lineNum);
-            Label label = checkLine(i, lines.get(i));
-            dataModel.addLabel(label);
-            lineNum++;
-        }
-
-
-        */
         dataModel.setCategory(FileUtil.getFileName(file));
+
+        LOGGER.info("File processed successfully within " + (System.currentTimeMillis() - startTime) / 1000 + " s");
         return dataModel;
     }
 
-    private Label checkLine (int lineNum, String line, JLanguageTool lanTool)
+    private Label checkLine (int lineNum, String line, JLanguageTool lanTool, boolean transform)
     {
         Label labelEntry = new Label(String.valueOf(lineNum), line);
         try
         {
-            List<TypoInspectionDataModel.ErrorItem> errorItems = inspectText(line, lanTool);
+            List<TypoInspectionDataModel.ErrorItem> errorItems = inspectText(line, lanTool, transform);
             if (errorItems != null && errorItems.size() > 0)
             {
                 labelEntry.setErrorItems(errorItems);
@@ -97,7 +72,7 @@ public class PlainTextSpellingInspector extends AbstractSpellingInspector
         }
         catch (Exception e)
         {
-            LOGGER.warn("Failed to process L" + lineNum + ": " + line, e);
+            LOGGER.warn("Failed to process L-" + lineNum + ": " + line, e);
         }
 
         return labelEntry;
@@ -105,7 +80,14 @@ public class PlainTextSpellingInspector extends AbstractSpellingInspector
 
     public Label checkLine (int lineNum, String line)
     {
-        return checkLine(lineNum, line, new JLanguageTool(ApplicationContext.getInstance().getLanguage()));
+        return checkLine(lineNum, line, false);
+    }
+
+    public Label checkLine (int lineNum, String line, boolean transform)
+    {
+        JLanguageTool languageTool = new JLanguageTool(ApplicationContext.getInstance().getLanguage());
+        ApplicationContext.getInstance().addIgnoredWordsToLangTool(languageTool);
+        return checkLine(lineNum, line, languageTool, transform);
     }
 
     public class InspectTask extends RecursiveTask<List<Label>>
@@ -165,7 +147,7 @@ public class PlainTextSpellingInspector extends AbstractSpellingInspector
                     if (line != null && !"".equals(line))
                     {
                         System.out.println("Processing line-" + i); //": " + lines.get(i));
-                        labels.add(inspector.checkLine(i, line, lanTool));
+                        labels.add(inspector.checkLine(i, line, lanTool, true));
                     }
                 }
             }

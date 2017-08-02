@@ -17,27 +17,6 @@ public class TypoInspectionDataModel
     private boolean isPlainText = false;
     private boolean hasError;
     private List<Label> labels = new ArrayList<>();
-    private Map<Object, Boolean> navigations = new TreeMap<>();;
-
-    public Map<Object, Boolean> getNavigations()
-    {
-        if (isPlainText)
-        {
-            if (labels != null)
-            {
-                for (Label label : labels)
-                {
-                    navigations.put(Integer.valueOf(label.getLabel()), label.hasError);
-                }
-            }
-        }
-        else
-        {
-            navigations.put(fileName, hasError);
-        }
-
-        return navigations;
-    }
 
     public TypoInspectionDataModel (String filePath)
     {
@@ -78,7 +57,7 @@ public class TypoInspectionDataModel
 
 
     @Data
-    public static class Label implements Comparator<Label>
+    public static class Label implements Comparable<Label>
     {
         private String label;
         private String rawText;
@@ -95,7 +74,7 @@ public class TypoInspectionDataModel
             this.rawText = rawText;
         }
 
-        public boolean isHasError()
+        public boolean isHasError ()
         {
             if (errorItems != null && errorItems.size() > 0)
             {
@@ -105,9 +84,9 @@ public class TypoInspectionDataModel
             return false;
         }
 
-        public String getRawText()
+        public String getRawText ()
         {
-            if (errorItems.size() >  0)
+            if (errorItems.size() > 0)
             {
                 for (int i = errorItems.size() - 1; i >= 0; i--)
                 {
@@ -123,9 +102,16 @@ public class TypoInspectionDataModel
         }
 
         @Override
-        public int compare (Label o1, Label o2)
+        public int compareTo (Label o)
         {
-            return o1.getLabel().compareTo(o2.getLabel());
+            try
+            {
+                return Integer.valueOf(this.getLabel()) - Integer.valueOf(o.getLabel());
+            }
+            catch (NumberFormatException ex)
+            {
+                return this.getLabel().compareTo(o.getLabel());
+            }
         }
     }
 

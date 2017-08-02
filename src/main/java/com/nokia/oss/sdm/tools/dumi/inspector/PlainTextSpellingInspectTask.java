@@ -29,43 +29,6 @@ public class PlainTextSpellingInspectTask implements Callable<List<Label>>
         this.end = end;
     }
 
-    private String transform (String text)
-    {
-        String textSplitter = ApplicationContext.getInstance().getOptions().getPlainTextSplitter();
-        if (textSplitter != null && !"".equals(text))
-        {
-            String[] entries = textSplitter.split(",");
-            if (entries.length > 1)
-            {
-                try
-                {
-                    String splitter = escapeString(entries[0]);
-                    int splitIndex = Integer.valueOf(entries[1]);
-                    String[] strs = text.split(splitter);
-                    if (strs.length > splitIndex)
-                    {
-                        return strs[splitIndex].trim();
-                    }
-                }
-                catch (Exception e)
-                {
-                }
-            }
-        }
-
-        return text;
-    }
-
-    private String escapeString (String text)
-    {
-        text = text.indexOf("|") > -1 ? text.replaceAll("\\|", "\\\\|") : text;
-        text = text.indexOf(".") > -1 ? text.replaceAll("\\.", "\\\\.") : text;
-        text = text.indexOf("*") > -1 ? text.replaceAll("\\*", "\\\\*") : text;
-        text = text.indexOf("?") > -1 ? text.replaceAll("\\?", "\\\\?") : text;
-        text = text.indexOf("^") > -1 ? text.replaceAll("\\^", "\\\\^") : text;
-        text = text.indexOf(":") > -1 ? text.replaceAll("\\:", "\\\\:") : text;
-        return text;
-    }
 
     /**
      * Computes a result, or throws an exception if unable to do so.
@@ -82,9 +45,9 @@ public class PlainTextSpellingInspectTask implements Callable<List<Label>>
             String text = lines.get(i);
             if (text != null && !"".equals(text))
             {
-                String transformedText = transform(text);
-                LOGGER.info("Processing line" + i + " - '" + transformedText);
-                labels.add(inspector.checkLine(i, transform(text)));
+                LOGGER.info("Processing line" + i + " - " + text);
+                Label label = inspector.checkLine(i, text, true);
+                labels.add(label);
             }
         }
 
