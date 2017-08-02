@@ -12,6 +12,11 @@ import java.util.List;
  */
 public class FileUtil
 {
+    public static List<String> getFileContent (String file)
+    {
+        return getFileContent(file, true);
+    }
+
     public static List<String> getFileContent (String file, boolean isInSource)
     {
         List<String> lines = new ArrayList<String>();

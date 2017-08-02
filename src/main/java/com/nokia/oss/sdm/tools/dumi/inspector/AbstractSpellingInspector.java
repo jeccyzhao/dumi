@@ -1,6 +1,7 @@
 package com.nokia.oss.sdm.tools.dumi.inspector;
 
 import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
+import com.nokia.oss.sdm.tools.dumi.inspector.rule.FilterRule;
 import com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel;
 import static com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel.ErrorItem;
 
@@ -91,14 +92,19 @@ public abstract class AbstractSpellingInspector
         {
             String transformedText = transform ? transform(text) : text;
             List<RuleMatch> matches = languageTool.check(transformedText.toLowerCase());
+            List<ErrorItem> potentialErrorItems = null;
             if (matches.size() > 0)
             {
-                List<ErrorItem> potentialErrorItems = new ArrayList<ErrorItem>();
                 for (RuleMatch match : matches)
                 {
                     ErrorItem errorItem = buildErrorItem(match, text, transformedText);
                     if (errorItem != null)
                     {
+                        if (potentialErrorItems == null)
+                        {
+                            potentialErrorItems = new ArrayList<>();
+                        }
+
                         potentialErrorItems.add(errorItem);
                     }
                 }
@@ -106,7 +112,6 @@ public abstract class AbstractSpellingInspector
                 return potentialErrorItems;
             }
         }
-
         return null;
     }
 
@@ -117,6 +122,14 @@ public abstract class AbstractSpellingInspector
             int fromPos = ruleMatch.getFromPos();
             int toPos = ruleMatch.getToPos();
             String errorWord = transformedText.substring(fromPos, toPos);
+
+            for (FilterRule rule : ApplicationContext.getInstance().getFilterRules())
+            {
+                if (rule.isPhraseAccepted(errorWord))
+                {
+                    return null;
+                }
+            }
 
             boolean trackError = true;
             if (ruleMatch.getRule() instanceof UppercaseSentenceStartRule)

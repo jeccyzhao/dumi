@@ -46,8 +46,7 @@ public class PlainTextSpellingInspectTask implements Callable<List<Label>>
             if (text != null && !"".equals(text))
             {
                 LOGGER.info("Processing line" + i + " - " + text);
-                Label label = inspector.checkLine(i, text, true);
-                labels.add(label);
+                labels.add(inspector.checkLine(i, text, true));
             }
         }
 

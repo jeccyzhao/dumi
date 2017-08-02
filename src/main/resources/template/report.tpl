@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>${env.title}</title>
+        <link href="https://git.oschina.net/assets/favicon-f6562a1bc6a110e32367f6e0cab4ba89.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
         <style>
             html, body { margin:0; padding:0; font-family: sans-serif;}

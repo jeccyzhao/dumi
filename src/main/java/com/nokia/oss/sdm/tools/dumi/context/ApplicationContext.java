@@ -1,5 +1,8 @@
 package com.nokia.oss.sdm.tools.dumi.context;
 
+import com.nokia.oss.sdm.tools.dumi.inspector.rule.FilterRule;
+import com.nokia.oss.sdm.tools.dumi.inspector.rule.PlainTextFilterRule;
+import com.nokia.oss.sdm.tools.dumi.inspector.rule.RegexPatternFilterRule;
 import com.nokia.oss.sdm.tools.dumi.util.FileUtil;
 import org.languagetool.JLanguageTool;
 import org.languagetool.Language;
@@ -11,6 +14,7 @@ import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Filter;
 
 /**
  * Created by x36zhao on 2017/7/23.
@@ -19,10 +23,11 @@ public class ApplicationContext
 {
     public static ApplicationContext instance = new ApplicationContext();
 
+    private Options options;
     private Language lang = new BritishEnglish();
     private JLanguageTool langTool = new JLanguageTool(lang);
     private List<String> acceptedPhrases = new ArrayList<String>();
-    private Options options;
+    private List<FilterRule> filterRules = new ArrayList<>();
 
     public Options getOptions()
     {
@@ -32,6 +37,12 @@ public class ApplicationContext
     public void setOptions(Options options)
     {
         this.options = options;
+
+        String userDictionary = this.options.getUserDictionary();
+        if (userDictionary != null && !"".equals(userDictionary))
+        {
+            addIgnoredWords(userDictionary, false);
+        }
     }
 
     private ResourceBundle resource;
@@ -39,6 +50,7 @@ public class ApplicationContext
     private ApplicationContext ()
     {
         loadAssembly();
+        loadRules();
     }
 
     public Language getLanguage()
@@ -56,10 +68,28 @@ public class ApplicationContext
         return instance;
     }
 
+    public List<FilterRule> getFilterRules()
+    {
+        return filterRules;
+    }
+
+    private void loadRules ()
+    {
+        filterRules.add(new PlainTextFilterRule());
+        filterRules.add(new RegexPatternFilterRule());
+
+        for (FilterRule rule : filterRules)
+        {
+            rule.loadRule();
+        }
+    }
+
     public void loadAssembly()
     {
         resource = ResourceBundle.getBundle("assembly");
-        addIgnoredWords(resource.getString(Constants.propIgnoredBuiltInWords), true);
+
+        // replaced by filter rule
+        //addIgnoredWords(resource.getString(Constants.propIgnoredBuiltInWords), true);
     }
 
     public String getProperty (String propName)
