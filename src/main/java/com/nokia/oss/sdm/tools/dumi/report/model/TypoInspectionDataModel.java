@@ -3,9 +3,7 @@ package com.nokia.oss.sdm.tools.dumi.report.model;
 import lombok.Data;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by x36zhao on 2017/7/22.
@@ -16,8 +14,30 @@ public class TypoInspectionDataModel
     private String category;
     private String filePath;
     private String fileName;
+    private boolean isPlainText = false;
     private boolean hasError;
-    private List<Label> labels;
+    private List<Label> labels = new ArrayList<>();
+    private Map<Object, Boolean> navigations = new TreeMap<>();;
+
+    public Map<Object, Boolean> getNavigations()
+    {
+        if (isPlainText)
+        {
+            if (labels != null)
+            {
+                for (Label label : labels)
+                {
+                    navigations.put(Integer.valueOf(label.getLabel()), label.hasError);
+                }
+            }
+        }
+        else
+        {
+            navigations.put(fileName, hasError);
+        }
+
+        return navigations;
+    }
 
     public TypoInspectionDataModel (String filePath)
     {

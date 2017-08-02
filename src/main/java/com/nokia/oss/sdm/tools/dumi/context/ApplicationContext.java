@@ -7,6 +7,7 @@ import org.languagetool.language.BritishEnglish;
 import org.languagetool.rules.Rule;
 import org.languagetool.rules.spelling.SpellingCheckRule;
 
+import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -19,8 +20,19 @@ public class ApplicationContext
     public static ApplicationContext instance = new ApplicationContext();
 
     private Language lang = new BritishEnglish();
-    private JLanguageTool langTool = new JLanguageTool(new BritishEnglish());
+    private JLanguageTool langTool = new JLanguageTool(lang);
     private List<String> acceptedPhrases = new ArrayList<String>();
+    private Options options;
+
+    public Options getOptions()
+    {
+        return options;
+    }
+
+    public void setOptions(Options options)
+    {
+        this.options = options;
+    }
 
     private ResourceBundle resource;
 
@@ -47,7 +59,6 @@ public class ApplicationContext
     public void loadAssembly()
     {
         resource = ResourceBundle.getBundle("assembly");
-
         addIgnoredWords(resource.getString(Constants.propIgnoredBuiltInWords), true);
     }
 

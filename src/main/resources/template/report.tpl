@@ -66,7 +66,10 @@
                         <li class="ccat"><span>${key} (<label class="w-red">${dataMap[key].failureNum}</label> / <label class="w-info">${dataMap[key].totalNum}</label></span>)
                             <ul>
                                 <#list dataMap[key].data as data>
-                                    <li class="<#if !data.hasError>cpass</#if>"><a href="#${data.category}-${data.fileName}" class="<#if data.hasError>w-red<#else>w-green</#if>">${data.fileName}</a></li>
+                                    <#assign navs = data.navigations>
+                                    <#list navs?keys as navKey>
+                                        <li class="<#if !navs[navKey]>cpass</#if>"><a href="#${data.category}-${navKey}" class="<#if navs[navKey]>w-red<#else>w-green</#if>">${navKey}</a></li>
+                                    </#list>
                                 </#list>
                             </ul>
                         </li>
@@ -79,7 +82,7 @@
                         <div style="font-size: 24px; background-color: rgb(194, 205, 216)">${key}</div>
                         <#list dataMap[key].data as data>
                         <div class="cbox <#if data.hasError>cerror<#else>cpass</#if>">
-                            <a name="${data.category}-${data.fileName}"></a>
+                            <#if !data.plainText><a name="${data.category}-${data.fileName}"></a></#if>
                             <div class="ctitle <#if data.hasError>error<#else>success</#if>">${data.filePath}</div>
                             <div class="cdata">
                                 <table>
@@ -90,7 +93,7 @@
                                     </tr>
                                     <#list data.labels as label>
                                     <tr>
-                                        <td align="left">${label.label}</td>
+                                        <td align="left"><#if data.plainText><a name="${data.category}-${label.label}"></a></#if>${label.label}</td>
                                         <td >${label.rawText}</td>
                                         <td>
                                             <#if label.hasError>

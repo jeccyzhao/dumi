@@ -30,7 +30,7 @@ public class ReportBuilder
         try
         {
             String htmlFile = Constants.REPORT_FILE_NAME + "_" + DateUtil.parseTime(new Date())+ ".html";
-            Template template = config.getTemplate("report.tpl");
+            Template template = config.getTemplate(templateFile);
             File outputFile = new File(htmlFile);
             if (!outputFile.exists())
             {

@@ -1,5 +1,7 @@
 package com.nokia.oss.sdm.tools.dumi.inspector;
 
+import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
+import com.nokia.oss.sdm.tools.dumi.context.Constants;
 import com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel.Label;
 import org.apache.log4j.Logger;
 
@@ -25,8 +27,33 @@ public class PlainTextSpellingInspectTask implements Callable<List<Label>>
         this.lines = lines;
         this.start = start;
         this.end = end;
+    }
 
-        System.out.println("Processing lines from " + start + " to " + end);
+    private String transform (String text)
+    {
+        String textSplitter = ApplicationContext.getInstance().getOptions().getPlainTextSplitter();
+        if (textSplitter != null && !"".equals(text))
+        {
+            String[] entries = textSplitter.split(",");
+            if (entries.length > 1)
+            {
+                try
+                {
+                    String splitter = entries[0];
+                    int splitIndex = Integer.valueOf(entries[1]);
+                    String[] strs = text.split(splitter);
+                    if (strs.length > splitIndex)
+                    {
+                        return strs[splitIndex];
+                    }
+                }
+                catch (Exception e)
+                {
+                }
+            }
+        }
+
+        return text;
     }
 
     /**
@@ -44,8 +71,9 @@ public class PlainTextSpellingInspectTask implements Callable<List<Label>>
             String text = lines.get(i);
             if (text != null && !"".equals(text))
             {
-                LOGGER.info("Processing line" + i + " - '" + text.substring(0, text.length() > 100 ? 100 : text.length() - 1) + "...'");
-                labels.add(inspector.checkLine(i, text));
+                String transformedText = transform(text);
+                LOGGER.info("Processing line" + i + " - '" + transformedText);
+                labels.add(inspector.checkLine(i, transform(text)));
             }
         }
 

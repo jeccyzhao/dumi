@@ -2,6 +2,7 @@ package com.nokia.oss.sdm.tools.dumi;
 
 import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
 import com.nokia.oss.sdm.tools.dumi.context.Constants;
+import com.nokia.oss.sdm.tools.dumi.context.Options;
 import com.nokia.oss.sdm.tools.dumi.inspector.SpellingInspectorFactory;
 import com.nokia.oss.sdm.tools.dumi.report.model.Environment;
 import com.nokia.oss.sdm.tools.dumi.report.ReportBuilder;
@@ -83,7 +84,12 @@ public class DumiInspector
             TypoInspectionDataModel rdm = inspector.process(file);
             if (rdm != null)
             {
-                ReportStatistics statistics = data.putIfAbsent(rdm.getCategory(), new ReportStatistics());
+                if (!data.containsKey(rdm.getCategory()))
+                {
+                    data.put(rdm.getCategory(), new ReportStatistics());
+                }
+
+                ReportStatistics statistics = data.get(rdm.getCategory());
                 statistics.setTotalNum(statistics.getTotalNum() + 1);
                 if (rdm.isHasError())
                 {
@@ -91,6 +97,8 @@ public class DumiInspector
                 }
 
                 statistics.getData().add(rdm);
+
+                data.put(rdm.getCategory(), statistics);
             }
         }
     }
@@ -103,13 +111,16 @@ public class DumiInspector
             return;
         }
 
-        String scanFolder = args[0];
-        String userDictionaryFile = null;
-        if (args.length > 1)
+        Options options = Options.from(args);
+        if (options.isValid())
         {
-            userDictionaryFile = args[1];
+            ApplicationContext.getInstance().setOptions(options);
+            new DumiInspector().inspect(options.getScanFolder(), options.getUserDictionary());
         }
-
-        new DumiInspector().inspect(scanFolder, userDictionaryFile);
+        else
+        {
+            System.out.println("Invalid options");
+            System.exit(1);
+        }
     }
 }

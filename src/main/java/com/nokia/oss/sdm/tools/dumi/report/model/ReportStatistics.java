@@ -14,12 +14,5 @@ public class ReportStatistics
     private int totalNum;
     private int failureNum;
 
-    private List<String> labels;
     private List<TypoInspectionDataModel> data = new ArrayList<TypoInspectionDataModel>();
-
-    public List<String> getLabels()
-    {
-        return null;
-    }
-
 }

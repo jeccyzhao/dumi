@@ -17,14 +17,14 @@ import java.util.concurrent.*;
  */
 public class PlainTextSpellingInspector extends AbstractSpellingInspector
 {
-    public static final int MAX_LINE_PER_THREAD_THRESHOLD = 100;
-    public static final int MAX_THREAD_THRESHOLD = 4;
-
-    protected static final Logger LOGGER = Logger.getLogger(PlainTextSpellingInspector.class);
+    private static final int MAX_THREAD_THRESHOLD = 2;
+    private static final Logger LOGGER = Logger.getLogger(PlainTextSpellingInspector.class);
 
     public TypoInspectionDataModel doProcess (String file) throws Exception
     {
         TypoInspectionDataModel dataModel = new TypoInspectionDataModel(file);
+        dataModel.setPlainText(true);
+
         List<String> lines = FileUtil.getFileContent(file, false);
         long startTime = System.currentTimeMillis();
         int seed = lines.size() / MAX_THREAD_THRESHOLD;
@@ -92,6 +92,7 @@ public class PlainTextSpellingInspector extends AbstractSpellingInspector
             if (errorItems != null && errorItems.size() > 0)
             {
                 labelEntry.setErrorItems(errorItems);
+                labelEntry.setHasError(true);
             }
         }
         catch (Exception e)
