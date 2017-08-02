@@ -39,12 +39,12 @@ public class PlainTextSpellingInspectTask implements Callable<List<Label>>
             {
                 try
                 {
-                    String splitter = entries[0];
+                    String splitter = escapeString(entries[0]);
                     int splitIndex = Integer.valueOf(entries[1]);
                     String[] strs = text.split(splitter);
                     if (strs.length > splitIndex)
                     {
-                        return strs[splitIndex];
+                        return strs[splitIndex].trim();
                     }
                 }
                 catch (Exception e)
@@ -53,6 +53,17 @@ public class PlainTextSpellingInspectTask implements Callable<List<Label>>
             }
         }
 
+        return text;
+    }
+
+    private String escapeString (String text)
+    {
+        text = text.indexOf("|") > -1 ? text.replaceAll("\\|", "\\\\|") : text;
+        text = text.indexOf(".") > -1 ? text.replaceAll("\\.", "\\\\.") : text;
+        text = text.indexOf("*") > -1 ? text.replaceAll("\\*", "\\\\*") : text;
+        text = text.indexOf("?") > -1 ? text.replaceAll("\\?", "\\\\?") : text;
+        text = text.indexOf("^") > -1 ? text.replaceAll("\\^", "\\\\^") : text;
+        text = text.indexOf(":") > -1 ? text.replaceAll("\\:", "\\\\:") : text;
         return text;
     }
 
