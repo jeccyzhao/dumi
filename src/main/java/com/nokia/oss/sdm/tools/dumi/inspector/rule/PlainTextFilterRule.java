@@ -33,4 +33,10 @@ public class PlainTextFilterRule extends BaseFilterRule
     {
         return pharses.contains(text) || pharses.contains(text.toLowerCase());
     }
+
+    @Override
+    public List<String> filterText (String text)
+    {
+        return null;
+    }
 }

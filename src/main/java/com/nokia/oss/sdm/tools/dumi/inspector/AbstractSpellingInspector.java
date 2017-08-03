@@ -1,8 +1,12 @@
 package com.nokia.oss.sdm.tools.dumi.inspector;
 
 import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
+import com.nokia.oss.sdm.tools.dumi.context.Constants;
 import com.nokia.oss.sdm.tools.dumi.inspector.rule.FilterRule;
 import com.nokia.oss.sdm.tools.dumi.inspector.splitter.IdentifierSplitter;
+import com.nokia.oss.sdm.tools.dumi.inspector.splitter.PlainTextSplitter;
+import com.nokia.oss.sdm.tools.dumi.inspector.transform.TextTransformation;
+import com.nokia.oss.sdm.tools.dumi.inspector.transform.Transformation;
 import com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel;
 import static com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel.ErrorItem;
 
@@ -13,6 +17,7 @@ import org.languagetool.JLanguageTool;
 import org.languagetool.rules.RuleMatch;
 import org.languagetool.rules.UppercaseSentenceStartRule;
 
+import javax.xml.soap.Text;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -88,13 +93,20 @@ public abstract class AbstractSpellingInspector
         List<ErrorItem> errorItems = new ArrayList<>();
         if (rawText != null && !"".equals(rawText))
         {
-            String transformedText = transform ? transform(rawText) : rawText;
+            String transformedText = rawText;
+            Transformation transformation = null;
+            if (transform)
+            {
+                transformation = new TextTransformation(rawText, ApplicationContext.getInstance().getFilterRules());
+                transformedText = transformation.transform(rawText);
+            }
+
             List<RuleMatch> matches = languageTool.check(transformedText.toLowerCase());
             if (matches.size() > 0)
             {
                 for (RuleMatch match : matches)
                 {
-                    List<ErrorItem> items = buildErrorItems(match, rawText, transformedText, languageTool, fromPos);
+                    List<ErrorItem> items = buildErrorItems(match, rawText, transformedText, languageTool, fromPos, transformation);
                     if (items != null)
                     {
                         errorItems.addAll(items);
@@ -102,10 +114,13 @@ public abstract class AbstractSpellingInspector
                 }
             }
         }
+
         return errorItems;
     }
 
-    private ErrorItem makeErrorItem (final RuleMatch ruleMatch, String errorWord, String rawText, String transformedText, int from)
+    private ErrorItem makeErrorItem (final RuleMatch ruleMatch, String errorWord,
+                                     String rawText, String transformedText,
+                                     int from, Transformation transformation)
     {
         for (FilterRule rule : ApplicationContext.getInstance().getFilterRules())
         {
@@ -134,8 +149,10 @@ public abstract class AbstractSpellingInspector
         {
             errorItem = new ErrorItem();
             int prefixLen = rawText.indexOf(transformedText);
-            errorItem.setErrorStartPos(fromPos + prefixLen + from);
-            errorItem.setErrorEndPos(toPos + prefixLen + from);
+            prefixLen = prefixLen > -1 ? prefixLen : 0;
+            int deltaIndex = transformation != null ? transformation.getDeltaIndex(errorWord, transformedText) : 0;
+            errorItem.setErrorStartPos(fromPos + prefixLen + from + deltaIndex);
+            errorItem.setErrorEndPos(toPos + prefixLen + from + deltaIndex);
             errorItem.setErrorDescription(ruleMatch.getMessage());
             errorItem.setSuggestReplacements(StringUtils.join(ruleMatch.getSuggestedReplacements().toArray(), ","));
             errorItem.setErrorWord(errorWord);
@@ -145,7 +162,8 @@ public abstract class AbstractSpellingInspector
     }
 
     private List<ErrorItem> buildErrorItems (final RuleMatch ruleMatch, String rawText,
-                                             String transformedText, final JLanguageTool languageTool, int from)
+                                             String transformedText, final JLanguageTool languageTool,
+                                             int from, Transformation transformation)
     {
         List<ErrorItem> errorItems = new ArrayList<>();
         if (ruleMatch != null)
@@ -153,7 +171,6 @@ public abstract class AbstractSpellingInspector
             int fromPos = ruleMatch.getFromPos();
             int toPos = ruleMatch.getToPos();
             String errorWord = transformedText.substring(fromPos, toPos);
-
             List<String> identifiers = IdentifierSplitter.getInstance().split(errorWord, TextRange.allOf(errorWord));
             if (identifiers.size() > 1)
             {
@@ -161,8 +178,14 @@ public abstract class AbstractSpellingInspector
                 {
                     try
                     {
+                        int deltaIndex = 0;
+                        if (transformation != null)
+                        {
+                            deltaIndex = transformation.getDeltaIndex(errorWord, transformedText);
+                        }
+
                         errorItems.addAll(inspectText(identifier, languageTool, false,
-                                fromPos + errorWord.indexOf(identifier) + rawText.indexOf(transformedText)));
+                                fromPos + deltaIndex + errorWord.indexOf(identifier) + rawText.indexOf(transformedText)));
                     }
                     catch (IOException e)
                     {
@@ -172,7 +195,7 @@ public abstract class AbstractSpellingInspector
             }
             else
             {
-                ErrorItem errorItem = makeErrorItem(ruleMatch, errorWord, rawText, transformedText, from);
+                ErrorItem errorItem = makeErrorItem(ruleMatch, errorWord, rawText, transformedText, from, transformation);
                 if (errorItem != null)
                 {
                     errorItems.add(errorItem);
