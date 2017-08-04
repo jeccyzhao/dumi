@@ -1,4 +1,4 @@
-package com.nokia.oss.sdm.tools.dumi.spellchecker.util;
+package com.nokia.oss.sdm.tools.dumi.util;
 
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;

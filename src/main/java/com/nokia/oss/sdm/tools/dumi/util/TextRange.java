@@ -1,6 +1,4 @@
-package com.nokia.oss.sdm.tools.dumi.spellchecker.util;
-
-import javax.xml.soap.Text;
+package com.nokia.oss.sdm.tools.dumi.util;
 
 /**
  * Created by x36zhao on 2017/7/31.

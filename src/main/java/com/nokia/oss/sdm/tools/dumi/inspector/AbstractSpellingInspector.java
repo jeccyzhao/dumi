@@ -1,27 +1,23 @@
 package com.nokia.oss.sdm.tools.dumi.inspector;
 
 import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
-import com.nokia.oss.sdm.tools.dumi.context.Constants;
 import com.nokia.oss.sdm.tools.dumi.inspector.rule.FilterRule;
 import com.nokia.oss.sdm.tools.dumi.inspector.splitter.IdentifierSplitter;
-import com.nokia.oss.sdm.tools.dumi.inspector.splitter.PlainTextSplitter;
 import com.nokia.oss.sdm.tools.dumi.inspector.transform.TextTransformation;
 import com.nokia.oss.sdm.tools.dumi.inspector.transform.Transformation;
 import com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel;
 import static com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel.ErrorItem;
 import static com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel.Label;
 
-import com.nokia.oss.sdm.tools.dumi.spellchecker.util.TextRange;
+import com.nokia.oss.sdm.tools.dumi.util.TextRange;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.languagetool.JLanguageTool;
 import org.languagetool.rules.RuleMatch;
 import org.languagetool.rules.UppercaseSentenceStartRule;
 
-import javax.xml.soap.Text;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;

@@ -1,6 +1,6 @@
 package com.nokia.oss.sdm.tools.dumi.inspector.splitter;
 
-import com.nokia.oss.sdm.tools.dumi.spellchecker.util.TextRange;
+import com.nokia.oss.sdm.tools.dumi.util.TextRange;
 
 import java.util.ArrayList;
 import java.util.List;
