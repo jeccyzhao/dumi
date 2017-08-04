@@ -9,6 +9,7 @@ import com.nokia.oss.sdm.tools.dumi.inspector.transform.TextTransformation;
 import com.nokia.oss.sdm.tools.dumi.inspector.transform.Transformation;
 import com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel;
 import static com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel.ErrorItem;
+import static com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel.Label;
 
 import com.nokia.oss.sdm.tools.dumi.spellchecker.util.TextRange;
 import org.apache.commons.lang3.StringUtils;
@@ -20,7 +21,10 @@ import org.languagetool.rules.UppercaseSentenceStartRule;
 import javax.xml.soap.Text;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Future;
 
 /**
  * Created by x36zhao on 2017/7/21.
@@ -28,17 +32,43 @@ import java.util.List;
 public abstract class AbstractSpellingInspector
 {
     private static final Logger LOGGER = Logger.getLogger(AbstractSpellingInspector.class);
+    protected List<SpellingInspectTask> inspectTasks = new ArrayList<>();
+    protected ExecutorService executorService;
+    protected List<Future<List<Label>>> futures;
+
+    protected void addTask(SpellingInspectTask task)
+    {
+        inspectTasks.add(task);
+    }
+
+    public void stopTasks ()
+    {
+        if (futures != null)
+        {
+            for (Future<?> future : futures)
+            {
+                future.cancel(true);
+            }
+        }
+//        Iterator<SpellingInspectTask> itor = inspectTasks.iterator();
+//        while (itor.hasNext())
+//        {
+//            SpellingInspectTask task = itor.next();
+//            task.cancel();
+//            itor.remove();
+//        }
+    }
 
     public TypoInspectionDataModel process (String file)
     {
-        LOGGER.info("Processing file '" + file + "'");
+        ApplicationContext.Logger(LOGGER, "Processing file '" + file + "'", null);
         try
         {
             return doProcess(file);
         }
         catch (Exception e)
         {
-            LOGGER.error("Failed to process file " + file, e);
+            ApplicationContext.Logger(LOGGER, "Failed to process file ", e);
             return null;
         }
     }

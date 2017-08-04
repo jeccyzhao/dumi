@@ -1,5 +1,6 @@
 package com.nokia.oss.sdm.tools.dumi.report;
 
+import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
 import com.nokia.oss.sdm.tools.dumi.context.Constants;
 import com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector;
 import com.nokia.oss.sdm.tools.dumi.util.DateUtil;
@@ -23,6 +24,7 @@ public class ReportBuilder
 
     public String buildReport (String templateFile,  Map<String, Object> dataModel)
     {
+        ApplicationContext.Logger(LOGGER, "Building report..", null);
         FileWriter out = null;
         Configuration config = new Configuration(Configuration.DEFAULT_INCOMPATIBLE_IMPROVEMENTS);
         config.setDefaultEncoding("UTF-8");
@@ -39,7 +41,7 @@ public class ReportBuilder
             out = new FileWriter(outputFile);
             template.process(dataModel, out);
 
-            LOGGER.info("Report file is created as '" + htmlFile + "'");
+            ApplicationContext.Logger(LOGGER,  "Report file is created as '" + htmlFile + "'", null);
         }
         catch (IOException e)
         {

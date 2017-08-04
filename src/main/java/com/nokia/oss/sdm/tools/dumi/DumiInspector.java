@@ -2,7 +2,6 @@ package com.nokia.oss.sdm.tools.dumi;
 
 import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
 import com.nokia.oss.sdm.tools.dumi.context.Constants;
-import com.nokia.oss.sdm.tools.dumi.context.Options;
 import com.nokia.oss.sdm.tools.dumi.inspector.SpellingInspectorFactory;
 import com.nokia.oss.sdm.tools.dumi.report.model.Environment;
 import com.nokia.oss.sdm.tools.dumi.report.ReportBuilder;
@@ -12,7 +11,6 @@ import com.nokia.oss.sdm.tools.dumi.report.model.ReportStatistics;
 import com.nokia.oss.sdm.tools.dumi.util.FileUtil;
 import org.apache.log4j.Logger;
 
-import java.io.IOException;
 import java.util.*;
 
 /**
@@ -24,10 +22,14 @@ public class DumiInspector
     private static final String REPORT_TEMPLATE_FILE = "report.tpl";
     private static final String[] acceptedFileExts = new String[] {".man", ".log"};
     private static final Logger LOGGER = Logger.getLogger(DumiInspector.class);
+    private List<AbstractSpellingInspector> inspectors = new ArrayList<>();
 
-    public static void printHelp ()
+    public void stop ()
     {
-        System.out.println("java -jar dumi.jar <scanningFolder> [ignoredWordFile.txt]");
+        for (AbstractSpellingInspector inspector : inspectors)
+        {
+            inspector.stopTasks();
+        }
     }
 
     public void inspect (String folder, String userDictionaryFile)
@@ -81,6 +83,7 @@ public class DumiInspector
         AbstractSpellingInspector inspector = SpellingInspectorFactory.createSpellingChecker(file);
         if (inspector != null)
         {
+            inspectors.add(inspector);
             TypoInspectionDataModel rdm = inspector.process(file);
             if (rdm != null)
             {
@@ -100,27 +103,6 @@ public class DumiInspector
 
                 data.put(rdm.getCategory(), statistics);
             }
-        }
-    }
-
-    public static void main (String[] args) throws IOException
-    {
-        if (args.length < 1)
-        {
-            printHelp();
-            return;
-        }
-
-        Options options = Options.from(args);
-        if (options.isValid())
-        {
-            ApplicationContext.getInstance().setOptions(options);
-            new DumiInspector().inspect(options.getScanFolder(), options.getUserDictionary());
-        }
-        else
-        {
-            System.out.println("Invalid options");
-            System.exit(1);
         }
     }
 }

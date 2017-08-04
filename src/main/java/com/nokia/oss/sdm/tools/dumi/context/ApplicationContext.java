@@ -3,18 +3,19 @@ package com.nokia.oss.sdm.tools.dumi.context;
 import com.nokia.oss.sdm.tools.dumi.inspector.rule.FilterRule;
 import com.nokia.oss.sdm.tools.dumi.inspector.rule.PlainTextFilterRule;
 import com.nokia.oss.sdm.tools.dumi.inspector.rule.RegexPatternFilterRule;
+import com.nokia.oss.sdm.tools.dumi.gui.DumiGui;
+import com.nokia.oss.sdm.tools.dumi.gui.model.LogEntry;
 import com.nokia.oss.sdm.tools.dumi.util.FileUtil;
 import org.languagetool.JLanguageTool;
 import org.languagetool.Language;
 import org.languagetool.language.BritishEnglish;
 import org.languagetool.rules.Rule;
 import org.languagetool.rules.spelling.SpellingCheckRule;
+import org.apache.log4j.Logger;
 
-import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.logging.Filter;
 
 /**
  * Created by x36zhao on 2017/7/23.
@@ -23,7 +24,7 @@ public class ApplicationContext
 {
     public static ApplicationContext instance = new ApplicationContext();
 
-    private Options options;
+    private static Options options;
     private Language lang = new BritishEnglish();
     private JLanguageTool langTool = new JLanguageTool(lang);
     private List<String> acceptedPhrases = new ArrayList<String>();
@@ -100,6 +101,33 @@ public class ApplicationContext
         }
     }
 
+    public static void Logger (final Logger logger, String message)
+    {
+        Logger(logger, message, null);
+    }
+
+    public static void Logger (final Logger logger, String message, Throwable e)
+    {
+        if (e != null)
+        {
+            logger.error(message, e);
+        }
+        else
+        {
+            logger.info(message);
+        }
+
+        if (isGuiModeRunning())
+        {
+            DumiGui.getController().logEvent(new LogEntry(e != null ? "ERROR" : "INFO", message));
+        }
+    }
+
+    private static boolean isGuiModeRunning ()
+    {
+        return options != null && options.isGuiMode();
+    }
+
     public void loadAssembly()
     {
         resource = ResourceBundle.getBundle("assembly");
@@ -107,7 +135,18 @@ public class ApplicationContext
 
     public String getProperty (String propName)
     {
-        return resource.getString(propName);
+        return getProperty(propName, "");
+    }
+
+    public String getProperty (String propName, String defaultValue)
+    {
+        String propValue = resource.getString(propName);
+        if (propValue != null)
+        {
+            return propValue;
+        }
+
+        return defaultValue;
     }
 
     public void addIgnoredWords (String file, boolean isBuiltIn)

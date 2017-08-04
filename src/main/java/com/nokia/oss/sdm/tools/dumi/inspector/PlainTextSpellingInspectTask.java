@@ -1,7 +1,6 @@
 package com.nokia.oss.sdm.tools.dumi.inspector;
 
 import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
-import com.nokia.oss.sdm.tools.dumi.context.Constants;
 import com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel.Label;
 import org.apache.log4j.Logger;
 
@@ -29,7 +28,6 @@ public class PlainTextSpellingInspectTask implements Callable<List<Label>>
         this.end = end;
     }
 
-
     /**
      * Computes a result, or throws an exception if unable to do so.
      *
@@ -39,13 +37,15 @@ public class PlainTextSpellingInspectTask implements Callable<List<Label>>
     @Override
     public List<Label> call () throws Exception
     {
+        LOGGER.info("Processing is started in thread " + Thread.currentThread().getName());
         List<Label> labels = new ArrayList<>();
         for (int i = start; i < end; i++)
         {
             String text = lines.get(i);
             if (text != null && !"".equals(text))
             {
-                LOGGER.info("Processing line" + i + " - " + text);
+                String message = "Processing line" + i + ": " + text;
+                ApplicationContext.Logger(LOGGER, message, null);
                 labels.add(inspector.checkLine(i, text, true));
             }
         }

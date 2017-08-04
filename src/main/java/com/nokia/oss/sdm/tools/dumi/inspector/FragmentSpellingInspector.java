@@ -4,6 +4,7 @@ import com.nokia.oss.o2ml.metadata.fragment.BaseFragment;
 import com.nokia.oss.o2ml.metadata.fragment.parser.AbstractXmlParser;
 import com.nokia.oss.o2ml.metadata.fragment.parser.FragmentParserFactory;
 import com.nokia.oss.sdm.tools.dumi.annotation.TypoInspection;
+import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
 import com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel;
 import com.nokia.oss.sdm.tools.dumi.util.AnnotationUtil;
 import org.apache.log4j.Logger;
@@ -64,7 +65,7 @@ public class FragmentSpellingInspector extends AbstractSpellingInspector
             }
             catch (Exception e)
             {
-                LOGGER.warn("Failed to process filed " + field.getName(), e);
+                ApplicationContext.Logger(LOGGER, "Failed to process filed " + field.getName(), e);
             }
         }
 

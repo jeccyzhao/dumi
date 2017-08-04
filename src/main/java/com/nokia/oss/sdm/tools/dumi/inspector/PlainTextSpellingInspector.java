@@ -31,27 +31,33 @@ public class PlainTextSpellingInspector extends AbstractSpellingInspector
         int seed = lines.size() / threadThreshold;
         int linePerThread = seed > 0 ? seed : -1;
         int threadNum = linePerThread > 0 ? threadThreshold : 1;
-        ExecutorService exec = Executors.newFixedThreadPool(threadNum);
-        List<Future<List<Label>>> executionFeedbacks = new ArrayList<>();
+        executorService = Executors.newFixedThreadPool(threadNum);
+        futures = new ArrayList<>();
         for (int i = 0; i < threadNum; i++)
         {
             int start = i * linePerThread;
             int end = (i < threadNum - 1) ? (i * linePerThread + linePerThread) : lines.size();
-            executionFeedbacks.add(exec.submit(new PlainTextSpellingInspectTask(this, lines, start, end)));
+
+            PlainTextSpellingInspectTask task = new PlainTextSpellingInspectTask(this, lines, start, end);
+            futures.add(executorService.submit(task));
         }
 
-        for (Future<List<Label>> feedback : executionFeedbacks)
+        for (Future<List<Label>> feedback : futures)
         {
             try
             {
-                dataModel.getLabels().addAll(feedback.get());
+                if (feedback != null)
+                {
+                    dataModel.getLabels().addAll(feedback.get());
+                }
             }
             catch (Exception e)
             {
+                LOGGER.error("Execution fails due to " + e.getMessage(), e);
             }
         }
 
-        exec.shutdown();
+        executorService.shutdown();
 
         dataModel.setCategory(FileUtil.getFileName(file));
 
@@ -99,71 +105,5 @@ public class PlainTextSpellingInspector extends AbstractSpellingInspector
 
         ApplicationContext.getInstance().addIgnoredWordsToLangTool(languageTool);
         return checkLine(lineNum, line, languageTool, transform);
-    }
-
-    public class InspectTask extends RecursiveTask<List<Label>>
-    {
-        private final PlainTextSpellingInspector inspector;
-        private final List<String> lines;
-        private JLanguageTool lanTool = new JLanguageTool(ApplicationContext.getInstance().getLanguage());
-        private int threshold;
-        private int start;
-        private int end;
-
-        public InspectTask(PlainTextSpellingInspector inspector, List<String> lines, int threshold)
-        {
-            this(inspector, lines, threshold, 0, lines.size());
-        }
-
-        public InspectTask(PlainTextSpellingInspector inspector, List<String> lines, int threshold, int start, int end)
-        {
-            this.inspector = inspector;
-            this.lines = lines;
-            this.start = start;
-            this.end = end;
-            this.threshold = threshold;
-
-            System.out.println("Forking from " + start + " to " + end);
-        }
-
-        /**
-         * The main computation performed by this task.
-         *
-         * @return the result of the computation
-         */
-        @Override
-        protected List<Label> compute ()
-        {
-            List<Label> labels = new ArrayList<>();
-            boolean fork = (end - start) > threshold;
-            if (fork)
-            {
-
-                int middle = (start + end) / 2;
-                InspectTask lTask = new InspectTask(inspector, lines, threshold, start, middle);
-                InspectTask rTask = new InspectTask(inspector, lines, threshold, middle + 1, end);
-
-                invokeAll(lTask, rTask);
-                //lTask.fork();
-                //rTask.fork();
-
-                labels.addAll(lTask.join());
-                labels.addAll(rTask.join());
-            }
-            else
-            {
-                for (int i = start; i < end; i++)
-                {
-                    String line = lines.get(i);
-                    if (line != null && !"".equals(line))
-                    {
-                        System.out.println("Processing line-" + i); //": " + lines.get(i));
-                        labels.add(inspector.checkLine(i, line, lanTool, true));
-                    }
-                }
-            }
-
-            return labels;
-        }
     }
 }

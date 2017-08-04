@@ -13,6 +13,11 @@ public class DateUtil
 
     public static String parseTime(Date date)
     {
-        return new SimpleDateFormat(defaultDatePattern).format(date);
+        return parseTime(date, defaultDatePattern);
+    }
+
+    public static String parseTime(Date date, String pattern)
+    {
+        return new SimpleDateFormat(pattern).format(date);
     }
 }

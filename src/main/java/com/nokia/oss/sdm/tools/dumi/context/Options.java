@@ -33,8 +33,16 @@ public final class Options
     @OptionArgument(attribute = "-t")
     private int threadThreshold;
 
+    @OptionArgument(attribute = "-gui")
+    private String guiMode;
+
     public Options ()
     {
+    }
+
+    public boolean isGuiMode ()
+    {
+        return guiMode != null;
     }
 
     public int getThreadThreshold()
@@ -60,7 +68,12 @@ public final class Options
 
     public boolean isValid ()
     {
-        return scanFolder != null && new File(scanFolder).exists();
+        if (!isGuiMode())
+        {
+            return scanFolder != null && new File(scanFolder).exists();
+        }
+
+        return true;
     }
 
     public String getPlainTextSplitter()
@@ -81,6 +94,11 @@ public final class Options
             List<Field> fields = AnnotationUtil.getAnnotatedFields(OptionArgument.class, Options.class);
             for (int i = 0; i < args.length; i++)
             {
+                if (i + 1 >= args.length)
+                {
+                    break;
+                }
+
                 String argName = args[i];
                 String argValue = args[i + 1];
                 for (Field field : fields)
