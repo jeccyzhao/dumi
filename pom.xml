@@ -90,7 +90,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.nokia.oss.sdm.tools.dumi.DumiInspector</mainClass>
+                            <mainClass>com.nokia.oss.sdm.tools.dumi.DumiStarter</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

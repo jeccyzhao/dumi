@@ -1,12 +1,10 @@
-package com.nokia.oss.sdm.tools.dumi;
+package com.nokia.oss.sdm.tools.dumi.inspector;
 
 import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
 import com.nokia.oss.sdm.tools.dumi.context.Constants;
-import com.nokia.oss.sdm.tools.dumi.inspector.SpellingInspectorFactory;
 import com.nokia.oss.sdm.tools.dumi.report.model.Environment;
 import com.nokia.oss.sdm.tools.dumi.report.ReportBuilder;
 import com.nokia.oss.sdm.tools.dumi.report.model.TypoInspectionDataModel;
-import com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector;
 import com.nokia.oss.sdm.tools.dumi.report.model.ReportStatistics;
 import com.nokia.oss.sdm.tools.dumi.util.FileUtil;
 import org.apache.log4j.Logger;
@@ -16,12 +14,12 @@ import java.util.*;
 /**
  * Created by x36zhao on 2017/7/21.
  */
-public class DumiInspector
+public class InspectionProcessor
 {
     private Map<String, ReportStatistics> data;
     private static final String REPORT_TEMPLATE_FILE = "report.tpl";
     private static final String[] acceptedFileExts = new String[] {".man", ".log"};
-    private static final Logger LOGGER = Logger.getLogger(DumiInspector.class);
+    private static final Logger LOGGER = Logger.getLogger(InspectionProcessor.class);
     private List<AbstractSpellingInspector> inspectors = new ArrayList<>();
 
     public void stop ()

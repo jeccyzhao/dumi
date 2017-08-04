@@ -6,36 +6,7 @@
         <link href="https://git.oschina.net/assets/favicon-f6562a1bc6a110e32367f6e0cab4ba89.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
         <style>
-            html, body { margin:0; padding:0; font-family: sans-serif;}
-            ul { margin: 5px; padding: 0 15px; overflow: auto;}
-            ul li { margin: 2px 0;}
-            header { height: 70px; position: fixed; width: 100%; top: 0px; z-index: 9999;}
-            header div { padding: 0 10px; }
-            header div.banner { background-color: #1C4598; line-height: 45px; height: 45px; color: #FFF; }
-            header div.remark { background-color: #E3E3E3; line-height: 25px; height: 25px; color: #000; font-size: 9pt; }
-
-            #container { margin-top: 10px; padding: 0 10px;}
-
-            .nav { position: fixed; overflow: auto; top: 70px; left: 0; width: 220px; height: 90%; list-style-type: none; margin: 0; padding: 0; background: #f7f7f7; font-size: 9pt; }
-            .nav {float: left;}
-            .nav ul { padding-left: 10px;}
-            .nav ul li.ccat span { cursor: pointer; }
-            .main { margin-top: 80px; padding-left: 230px; }
-            .cpass { display: none; }
-            tr.cpass { background-color: #d2ffde}
-            .cbox { border: 1px dashed #eee; font-size: 14px; margin-bottom: 10px; }
-            .cbox .ctitle { line-height: 30px; height: 30px; background-color: #eee; padding-left: 5px; color: #fff;}
-            .cbox .error { background-color: #F52908; }
-            .cbox .success { background-color: #1c4; }
-            .cbox .cdata table { width: 100%; border-collapse:collapse; border-spacing: 0;  border: solid #ccc 1px; table-layout:fixed; word-wrap:break-word;}
-            .cbox .cdata table td, .cbox .cdata table th { border-left: 1px solid #ccc; border-top: 1px solid #ccc; }
-            .cbox .cdata table th { background-color: #dce9f9;  background-color: #F6F6F6; font-size: 12px; text-align: center}
-            .cbox .cdata table td { font-size: 9pt; }
-
-            .w-caution { background-color: #F52908; color: #FFF; }
-            .w-info { color: #1C4598; }
-            .w-green { color: #1c4; }
-            .w-red { color: #F52908; }
+            body,html{margin:0;padding:0;font-family:sans-serif}ul{margin:5px;padding:0 15px;overflow:auto}ul li{margin:2px 0}header{height:70px;position:fixed;width:100%;top:0;z-index:9999}header div{padding:0 10px}header div.banner{background-color:#1C4598;line-height:45px;height:45px;color:#FFF}header div.remark{background-color:#E3E3E3;line-height:25px;height:25px;color:#000;font-size:9pt}#container{margin-top:10px;padding:0 10px}.nav{position:fixed;overflow:auto;top:70px;left:0;width:220px;height:90%;list-style-type:none;margin:0;padding:0;background:#f7f7f7;font-size:9pt}.nav{float:left}.nav ul{padding-left:10px}.nav ul li.ccat span{cursor:pointer}.main{margin-top:80px;padding-left:230px}.cpass{display:none}tr.cpass{background-color:#d2ffde}.cbox{border:1px dashed #eee;font-size:14px;margin-bottom:10px}.cbox .ctitle{line-height:30px;height:30px;background-color:#eee;padding-left:5px;color:#fff}.cbox .error{background-color:#F52908}.cbox .success{background-color:#1c4}.cbox .cdata table{width:100%;border-collapse:collapse;border-spacing:0;border:solid #ccc 1px;table-layout:fixed;word-wrap:break-word}.cbox .cdata table td,.cbox .cdata table th{border-left:1px solid #ccc;border-top:1px solid #ccc}.cbox .cdata table th{background-color:#dce9f9;background-color:#F6F6F6;font-size:12px;text-align:center}.cbox .cdata table td{font-size:9pt}.w-caution{background-color:#F52908;color:#FFF}.w-info{color:#1C4598}.w-green{color:#1c4}.w-red{color:#F52908}
         </style>
         <script>
             $(function(){

@@ -1,17 +1,15 @@
 package com.nokia.oss.sdm.tools.dumi.gui;
 
-import com.nokia.oss.sdm.tools.dumi.DumiInspector;
+import com.nokia.oss.sdm.tools.dumi.inspector.InspectionProcessor;
 import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
 import com.nokia.oss.sdm.tools.dumi.context.Constants;
 import com.nokia.oss.sdm.tools.dumi.context.Options;
 import com.nokia.oss.sdm.tools.dumi.gui.controller.DumiGuiController;
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
 
 import java.awt.*;
 
@@ -78,7 +76,7 @@ public class DumiGui extends Application
         if (options.isValid())
         {
             ApplicationContext.getInstance().setOptions(options);
-            new DumiInspector().inspect(options.getScanFolder(), options.getUserDictionary());
+            new InspectionProcessor().inspect(options.getScanFolder(), options.getUserDictionary());
         }
         else
         {

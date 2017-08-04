@@ -1,10 +1,9 @@
 package com.nokia.oss.sdm.tools.dumi.gui.controller;
 
-import com.nokia.oss.sdm.tools.dumi.DumiInspector;
+import com.nokia.oss.sdm.tools.dumi.inspector.InspectionProcessor;
 import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
 import com.nokia.oss.sdm.tools.dumi.context.Options;
 import com.nokia.oss.sdm.tools.dumi.gui.model.LogEntry;
-import javafx.collections.ListChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -38,7 +37,7 @@ public class DumiGuiController
     @FXML
     private TableColumn<LogEntry, String> textColumn;
 
-    private DumiInspector inspector;
+    private InspectionProcessor inspector;
 
     @FXML
     private Button stopButton;
@@ -115,7 +114,7 @@ public class DumiGuiController
             logViewList.getItems().clear();
         }
 
-        inspector = new DumiInspector();
+        inspector = new InspectionProcessor();
         new Thread(new Runnable()
         {
             @Override

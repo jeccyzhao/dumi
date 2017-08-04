@@ -3,6 +3,7 @@ package com.nokia.oss.sdm.tools.dumi;
 import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
 import com.nokia.oss.sdm.tools.dumi.context.Options;
 import com.nokia.oss.sdm.tools.dumi.gui.DumiGui;
+import com.nokia.oss.sdm.tools.dumi.inspector.InspectionProcessor;
 import com.nokia.oss.sdm.tools.dumi.util.StringUtil;
 import javafx.application.Application;
 
@@ -35,7 +36,7 @@ public class DumiStarter
             }
             else
             {
-                new DumiInspector().inspect(options.getScanFolder(), options.getUserDictionary());
+                new InspectionProcessor().inspect(options.getScanFolder(), options.getUserDictionary());
             }
         }
         else

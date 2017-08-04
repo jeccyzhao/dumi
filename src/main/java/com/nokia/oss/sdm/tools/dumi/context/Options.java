@@ -33,8 +33,8 @@ public final class Options
     @OptionArgument(attribute = "-t")
     private int threadThreshold;
 
-    @OptionArgument(attribute = "-gui")
-    private String guiMode;
+    @OptionArgument(attribute = "-console")
+    private String consoleMode;
 
     public Options ()
     {
@@ -42,7 +42,7 @@ public final class Options
 
     public boolean isGuiMode ()
     {
-        return guiMode != null;
+        return consoleMode == null;
     }
 
     public int getThreadThreshold()
