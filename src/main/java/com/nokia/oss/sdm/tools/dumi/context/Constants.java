@@ -12,4 +12,7 @@ public final class Constants
     public static final String propThreadThreshold = "dumi.thread.threshold";
     public static final String propDisabedRules = "dumi.disabled.rules";
     public static final String REPORT_FILE_NAME = "dumiReport";
+
+    public static final String DEFAULT_TOOL_TITLE = "Do You Mean It";
+    public static final String DEFAULT_TOOL_VERSION = "1.0";
 }

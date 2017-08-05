@@ -4,34 +4,82 @@ import com.nokia.oss.sdm.tools.dumi.util.FileUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Filter;
 
 /**
  * Created by x36zhao on 2017/8/2.
  */
 public abstract class BaseFilterRule implements FilterRule
 {
-    protected List<String> pharses = new ArrayList<>();
+    protected List<FilterText> phrases = new ArrayList<>();
     protected String name;
     protected boolean loaded;
 
     @Override
-    public List<String> getAcceptedPharases ()
+    public List<FilterText> getAcceptedPhrases ()
     {
-        return pharses;
+        return phrases;
     }
 
     @Override
     public void loadRule()
     {
-        pharses = FileUtil.getFileContent(getRuleName());
+        List<String> lines = FileUtil.getFileContent(getRuleName());
+        if (lines != null && lines.size() > 0)
+        {
+            for (String line : lines)
+            {
+                FilterText filterText = new FilterText();
+                int pos = line.lastIndexOf("#");
+                if (pos > -1)
+                {
+                    filterText.setText(line.substring(0, pos));
+                    filterText.setRemark(line.substring(pos + 1));
+                }
+                else
+                {
+                    filterText.setText(line);
+                }
+
+                phrases.add(filterText);
+            }
+        }
     }
 
     @Override
-    public void addRule (String text)
+    public void removeRule (String text)
     {
-        if (pharses != null && !pharses.contains(text))
+        FilterText filterText = getByText(text);
+        if (filterText != null)
         {
-            pharses.add(text);
+            phrases.remove(filterText);
         }
+    }
+
+    @Override
+    public void addRule (String text, String remark)
+    {
+        boolean exists = getByText(text) != null;
+        if (!exists)
+        {
+            phrases.add(new FilterText(text, remark));
+        }
+    }
+
+    private FilterText getByText (String text)
+    {
+        if (phrases != null)
+        {
+            boolean exists = false;
+            for (FilterText filterText : phrases)
+            {
+                if (filterText.getText().equals(text))
+                {
+                    return filterText;
+                }
+            }
+        }
+
+        return null;
     }
 }

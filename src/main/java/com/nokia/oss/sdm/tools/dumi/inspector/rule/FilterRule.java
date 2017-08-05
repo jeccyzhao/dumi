@@ -11,8 +11,9 @@ public interface FilterRule
 {
     void loadRule();
     String getRuleName();
-    List<String> getAcceptedPharases();
+    List<FilterText> getAcceptedPhrases();
     boolean isPhraseAccepted (String text);
-    void addRule (String text);
+    void addRule (String text, String remark);
+    void removeRule (String text);
     List<String> filterText (String text);
 }

@@ -9,34 +9,35 @@ SYSLOG
 FlexFabric
 Cmdr
 GRP
-iLO
+HPHW
+iLO#HPHW
 OK
-OSS
+OSS#OSS Terms
 SNMP
-FM
-PM
+FM#OSS Terms
+PM#OSS Terms
 JMS
 XML
-NMS
+NMS#OSS Terms
 WERLOG
 EMS
-NE
+NE#OSS Terms
 JAVA
-PLMN
-MPM
+PLMN#OSS Terms
+MPM#OSS Terms
 MML
-NEs
+NEs#OSS Terms
 MSC
-DN
-FQDN
+DN#OSS Terms
+FQDN#OSS Terms
 csv
 ZMVI
-NetAct
-VM
-MF
-TLS
-MO
-NASDA
-NEAC
-NEIW
+NetAct#OSS Terms
+VM#OSS Terms
+MF#OSS Terms
+TLS#OSS Terms
+MO#OSS Terms
+NASDA#OSS Terms
+NEAC#OSS Terms
+NEIW#OSS Terms
 common_mediations

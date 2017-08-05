@@ -17,21 +17,28 @@ public class PlainTextFilterRule extends BaseFilterRule
         return FILE_RULE;
     }
 
-    @Override
-    public void loadRule()
-    {
-        List<String> rules = FileUtil.getFileContent(getRuleName());
-        for (String rule : rules)
-        {
-            pharses.add(rule.toLowerCase());
-            pharses.add(rule.toUpperCase());
-        }
-    }
+//    @Override
+//    public void loadRule()
+//    {
+//        List<String> lines = FileUtil.getFileContent(getRuleName());
+//        if (lines != null && lines.size() > 0)
+//        {
+//            for (String line : lines)
+//            {
+//
+//            }
+//        }
+//        for (String rule : rules)
+//        {
+//            phrases.add(rule.toLowerCase());
+//            phrases.add(rule.toUpperCase());
+//        }
+//    }
 
     @Override
     public boolean isPhraseAccepted (String text)
     {
-        return pharses.contains(text) || pharses.contains(text.toLowerCase());
+        return phrases.contains(text) || phrases.contains(text.toLowerCase());
     }
 
     @Override

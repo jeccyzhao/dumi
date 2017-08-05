@@ -55,7 +55,7 @@ public class ApplicationContext
                     List<String> rules = FileUtil.getFileContent(regexPatternRuleFile);
                     for (String rule : rules)
                     {
-                        filterRule.addRule(rule);
+                        filterRule.addRule(rule, null);
                     }
                 }
             }

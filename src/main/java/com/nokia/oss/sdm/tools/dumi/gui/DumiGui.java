@@ -9,31 +9,30 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import org.apache.log4j.Logger;
 
 import java.awt.*;
 
 public class DumiGui extends Application
 {
-    private static final String WIN_TITLE = "Do You Mean It";
-    private static final String WIN_VER = "1.0";
+    private Logger LOGGER = Logger.getLogger(DumiGui.class);
     private static final ApplicationContext context = ApplicationContext.getInstance();
+
+    private static int WIN_WIDTH = 800;
+    private static int WIN_HEIGHT = 600;
+
     private static DumiGui instance;
     private static DumiGuiController controller;
+
+    private static String LAYOUT_FILE = "/fx/dumi_ui.fxml";
 
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fx/dumi_ui.fxml"));
-        Parent root = loader.load();
-        primaryStage.setTitle(getWinTitle());
-        primaryStage.setScene(new Scene(root, 800, 600));
-        primaryStage.setResizable(false);
-        primaryStage.show();
-
-        Dimension d= Toolkit.getDefaultToolkit().getScreenSize();
-        primaryStage.setX(d.width/2-(primaryStage.getWidth()/2));
-        primaryStage.setY(d.height/2-(primaryStage.getHeight()/2));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(LAYOUT_FILE));
+        initialize(primaryStage, loader.load());
 
        /*primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle (WindowEvent we) {
@@ -45,6 +44,32 @@ public class DumiGui extends Application
 
         instance = this;
         controller = loader.getController();
+    }
+
+    private void centerOnScreen(Stage stage)
+    {
+        Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+        stage.setX(d.width/2 - (stage.getWidth()/2));
+        stage.setY(d.height/2 - (stage.getHeight()/2));
+    }
+
+    private void initialize(Stage stage, Parent root)
+    {
+        stage.setTitle(getWinTitle());
+        stage.setScene(new Scene(root, WIN_WIDTH, WIN_HEIGHT));
+        stage.setResizable(false);
+
+        try
+        {
+            stage.getIcons().add(new Image(getClass().getResourceAsStream("/icon.png")));
+        }
+        catch (Exception e)
+        {
+            LOGGER.warn("Failed to load icon image", e);
+        }
+
+        stage.show();
+        centerOnScreen(stage);
     }
 
     public static DumiGui getApplication()
@@ -60,9 +85,9 @@ public class DumiGui extends Application
     private String getWinTitle ()
     {
         StringBuilder builder = new StringBuilder();
-        builder.append(context.getProperty(Constants.propToolTitle, WIN_TITLE));
+        builder.append(context.getProperty(Constants.propToolTitle, Constants.DEFAULT_TOOL_TITLE));
         builder.append(" (v");
-        builder.append(context.getProperty(Constants.propToolVer, WIN_VER));
+        builder.append(context.getProperty(Constants.propToolVer, Constants.DEFAULT_TOOL_VERSION));
         builder.append(")");
         return builder.toString();
     }
@@ -83,7 +108,5 @@ public class DumiGui extends Application
             System.out.println("Invalid options");
             System.exit(1);
         }
-
-        //launch(args);
     }
 }

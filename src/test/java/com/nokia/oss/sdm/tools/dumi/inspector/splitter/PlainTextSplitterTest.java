@@ -14,7 +14,6 @@ import static org.junit.Assert.assertEquals;
  */
 public class PlainTextSplitterTest
 {
-    @Test
     public void testWordInCapsAfterDelimiter()
     {
         String text = "2016-11-16T10:30:02.976+0200 | (2,203,826) | 000003d4 | WorkManager.Scheduler WorkManager : 3 | INFO | com.nsn.oss.mpm.scheduler.ejb.MPMPollSubscribersJobSessionBean. | ---------Scheduler: All NE ActiveSubscribers got, totally: 5---------";
