@@ -28,7 +28,7 @@ public class ReportBuilder
         FileWriter out = null;
         Configuration config = new Configuration(Configuration.DEFAULT_INCOMPATIBLE_IMPROVEMENTS);
         config.setDefaultEncoding("UTF-8");
-        config.setClassForTemplateLoading(ReportBuilder.class, "/template");
+        config.setClassForTemplateLoading(ReportBuilder.class, "/res/template");
         try
         {
             String htmlFile = Constants.REPORT_FILE_NAME + "_" + DateUtil.parseTime(new Date())+ ".html";

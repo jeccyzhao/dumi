@@ -26,7 +26,7 @@ public class DumiGui extends Application
     private static DumiGui instance;
     private static DumiGuiController controller;
 
-    private static String LAYOUT_FILE = "/fx/dumi_ui.fxml";
+    private static String LAYOUT_FILE = "/res/fx/dumi_ui.fxml";
 
     @Override
     public void start(Stage primaryStage) throws Exception
@@ -61,7 +61,7 @@ public class DumiGui extends Application
 
         try
         {
-            stage.getIcons().add(new Image(getClass().getResourceAsStream("/icon.png")));
+            stage.getIcons().add(new Image(getClass().getResourceAsStream("/res/icon.png")));
         }
         catch (Exception e)
         {

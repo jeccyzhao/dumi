@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  */
 public class RegexPatternFilterRule extends BaseFilterRule
 {
-    private static final String FILE_RULE = "rules/rule_regexPattern.txt";
+    private static final String FILE_RULE = "res/rules/rule_regexPattern.txt";
 
     @Override
     public String getRuleName ()

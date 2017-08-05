@@ -28,11 +28,11 @@ import java.util.concurrent.Future;
 public abstract class AbstractSpellingInspector
 {
     private static final Logger LOGGER = Logger.getLogger(AbstractSpellingInspector.class);
-    protected List<SpellingInspectTask> inspectTasks = new ArrayList<>();
+    protected List<InspectTask> inspectTasks = new ArrayList<>();
     protected ExecutorService executorService;
     protected List<Future<List<Label>>> futures;
 
-    protected void addTask(SpellingInspectTask task)
+    protected void addTask(InspectTask task)
     {
         inspectTasks.add(task);
     }
@@ -46,10 +46,10 @@ public abstract class AbstractSpellingInspector
                 future.cancel(true);
             }
         }
-//        Iterator<SpellingInspectTask> itor = inspectTasks.iterator();
+//        Iterator<InspectTask> itor = inspectTasks.iterator();
 //        while (itor.hasNext())
 //        {
-//            SpellingInspectTask task = itor.next();
+//            InspectTask task = itor.next();
 //            task.cancel();
 //            itor.remove();
 //        }

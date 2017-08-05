@@ -11,7 +11,7 @@ import java.util.concurrent.*;
 /**
  * Created by x36zhao on 2017/7/31.
  */
-public class PlainTextSpellingInspectTask implements Callable<List<Label>>
+public class PlainTextSpellingInspectTask implements Callable<List<Label>>, InspectTask
 {
     protected static final Logger LOGGER = Logger.getLogger(PlainTextSpellingInspectTask.class);
 

@@ -1,7 +1,5 @@
 package com.nokia.oss.sdm.tools.dumi.inspector.rule;
 
-import com.nokia.oss.sdm.tools.dumi.util.FileUtil;
-
 import java.util.List;
 
 /**
@@ -9,7 +7,7 @@ import java.util.List;
  */
 public class PlainTextFilterRule extends BaseFilterRule
 {
-    private static final String FILE_RULE = "rules/rule_plainText.txt";
+    private static final String FILE_RULE = "res/rules/rule_plainText.txt";
 
     @Override
     public String getRuleName ()
@@ -28,7 +26,7 @@ public class PlainTextFilterRule extends BaseFilterRule
 //
 //            }
 //        }
-//        for (String rule : rules)
+//        for (String rule : res.rules)
 //        {
 //            phrases.add(rule.toLowerCase());
 //            phrases.add(rule.toUpperCase());
