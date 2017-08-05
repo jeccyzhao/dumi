@@ -17,7 +17,7 @@
       </columns>
     </TableView>
     <Button id="buttonStart" fx:id="startButton" defaultButton="true" layoutX="131.0" layoutY="558.0" mnemonicParsing="false" onAction="#onButtonStart" prefHeight="36.0" prefWidth="79.0" text="Start" underline="false" />
-    <Button id="buttonStart" fx:id="stopButton" cancelButton="false" defaultButton="false" disable="false" layoutX="46.0" layoutY="558.0" mnemonicParsing="false" onAction="#onButtonStop" prefHeight="36.0" prefWidth="79.0" text="Stop" underline="false" />
+    <Button id="buttonStart" fx:id="stopButton" cancelButton="false" defaultButton="false" disable="true" layoutX="46.0" layoutY="558.0" mnemonicParsing="false" onAction="#onButtonStop" prefHeight="36.0" prefWidth="79.0" text="Stop" underline="false" />
     <Accordion blendMode="DARKEN" layoutX="6.0" layoutY="5.0" minWidth="125.0" prefHeight="545.0" prefWidth="209.0">
       <expandedPane>
         <TitledPane fx:id="x2" animated="false" minWidth="183.0" mnemonicParsing="true" mouseTransparent="false" pickOnBounds="false" prefHeight="523.0" prefWidth="183.0" text="Configuration">
