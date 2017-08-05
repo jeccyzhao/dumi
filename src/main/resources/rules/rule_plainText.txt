@@ -1,17 +1,5 @@
-AC
-DC
-WSMAN
-EAE
-CONFIG
-PXE
-IO
-SYSLOG
-FlexFabric
-Cmdr
-GRP
-HPHW
-iLO#HPHW
-OK
+O&M#OSS Terms
+NSN#Nokia
 OSS#OSS Terms
 SNMP
 FM#OSS Terms
@@ -31,6 +19,18 @@ MSC
 DN#OSS Terms
 FQDN#OSS Terms
 csv
+WSMAN
+EAE
+CONFIG
+PXE
+IO
+SYSLOG
+FlexFabric
+Cmdr
+GRP
+HPHW
+iLO
+OK
 ZMVI
 NetAct#OSS Terms
 VM#OSS Terms
@@ -41,3 +41,5 @@ NASDA#OSS Terms
 NEAC#OSS Terms
 NEIW#OSS Terms
 common_mediations
+AC
+DC

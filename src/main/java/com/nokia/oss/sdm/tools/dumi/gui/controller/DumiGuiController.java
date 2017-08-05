@@ -170,12 +170,39 @@ public class DumiGuiController
         if (folder == null && "".equals(folder.trim()))
         {
             showDialog("Illegal Argument", null, "Scanning folder must not be empty", DIALOG_TYPE.ERROR);
+            scanFolder.requestFocus();
             return false;
         }
 
         if (!new File(folder).exists())
         {
             showDialog("Illegal Argument", null, "Scanning folder does not exit", DIALOG_TYPE.ERROR);
+            scanFolder.requestFocus();
+            return false;
+        }
+
+        String thresholdText = threshold.getText();
+        if (thresholdText == null || "".equals(thresholdText))
+        {
+            showDialog("Illegal Argument", null, "Thread threshold is invalid", DIALOG_TYPE.ERROR);
+            threshold.requestFocus();
+            return false;
+        }
+
+        try
+        {
+            int threhold = Integer.valueOf(thresholdText);
+            if (threhold < 0)
+            {
+                showDialog("Illegal Argument", null, "Thread threshold must be positive number", DIALOG_TYPE.ERROR);
+                threshold.requestFocus();
+                return false;
+            }
+        }
+        catch (NumberFormatException ex)
+        {
+            showDialog("Illegal Argument", null, "Thread threshold must be digital number", DIALOG_TYPE.ERROR);
+            threshold.requestFocus();
             return false;
         }
 
@@ -211,10 +238,8 @@ public class DumiGuiController
     {
         stop();
 
-        Node button = (Node) event.getSource();
-        button.setDisable(true);
-
         startButton.setDisable(false);
+        stopButton.setDisable(true);
         enableFormComponents(true);
     }
 
@@ -262,10 +287,13 @@ public class DumiGuiController
 
     private void showDeleteDialog (TableView<FilterText> tableView, Class filterRuleClass)
     {
-        Action action = showDialog("Delete Dialog", null, "Are you sure to delete the item?", DIALOG_TYPE.CONFIRM);
-        if (action == Dialog.ACTION_YES)
+        if (tableView.getSelectionModel().getSelectedIndex() > -1)
         {
-            removeItem(tableView, filterRuleClass);
+            Action action = showDialog("Delete Dialog", null, "Are you sure to delete the item?", DIALOG_TYPE.CONFIRM);
+            if (action == Dialog.ACTION_YES)
+            {
+                removeItem(tableView, filterRuleClass);
+            }
         }
     }
 
@@ -359,12 +387,13 @@ public class DumiGuiController
                 public void run ()
                 {
                     inspector.inspect(options.getScanFolder(), options.getUserDictionary());
+                    stopButton.setDisable(true);
+                    startButton.setDisable(false);
+                    enableFormComponents(true);
                 }
             }).start();
 
-            Node button = (Node) event.getSource();
-            button.setDisable(true);
-
+            startButton.setDisable(true);
             stopButton.setDisable(false);
             enableFormComponents(false);
         }

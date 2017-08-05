@@ -18,9 +18,33 @@
     </TableView>
     <Button id="buttonStart" fx:id="startButton" defaultButton="true" layoutX="131.0" layoutY="558.0" mnemonicParsing="false" onAction="#onButtonStart" prefHeight="36.0" prefWidth="79.0" text="Start" underline="false" />
     <Button id="buttonStart" fx:id="stopButton" cancelButton="false" defaultButton="false" disable="false" layoutX="46.0" layoutY="558.0" mnemonicParsing="false" onAction="#onButtonStop" prefHeight="36.0" prefWidth="79.0" text="Stop" underline="false" />
-    <Accordion layoutX="6.0" layoutY="5.0" minWidth="125.0" prefHeight="545.0" prefWidth="209.0">
+    <Accordion blendMode="DARKEN" layoutX="6.0" layoutY="5.0" minWidth="125.0" prefHeight="545.0" prefWidth="209.0">
       <expandedPane>
-        <TitledPane fx:id="x3" animated="false" text="Filter Rule">
+        <TitledPane fx:id="x2" animated="false" minWidth="183.0" mnemonicParsing="true" mouseTransparent="false" pickOnBounds="false" prefHeight="523.0" prefWidth="183.0" text="Configuration">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TextField id="scanFolder" fx:id="threshold" layoutX="3.0" layoutY="108.0" prefWidth="199.0" text="2" />
+                <Label layoutX="3.0" layoutY="87.0" text="Maximum Thread Threshold:">
+                  <font>
+                    <Font name="Arial" size="12.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <TextField fx:id="scanFolder" layoutX="3.0" layoutY="26.0" prefWidth="199.0" />
+                <Label font="$x1" layoutX="3.0" layoutY="9.0" text="Scanning Folder:" />
+                <Button id="fileBrowser" fx:id="browserButton" layoutX="129.0" layoutY="53.0" mnemonicParsing="false" onAction="#onBrowserFolderButtonClick" prefHeight="21.9609375" prefWidth="71.0" text="Browser.." wrapText="false" />
+                <Label font="$x1" layoutX="3.0" layoutY="164.0" text="Builtin Filters Enabling:" />
+                <ToggleButton layoutX="137.0" layoutY="161.0" mnemonicParsing="false" selected="true" text="Enabled" />
+                <Label font="$x1" layoutX="3.0" layoutY="211.0" text="Record Succ In Report:" />
+                <ToggleButton layoutX="136.0" layoutY="208.0" mnemonicParsing="false" prefWidth="63.0" selected="true" text="Record" />
+              </children>
+            </AnchorPane>
+          </content>
+        </TitledPane>
+      </expandedPane>
+      <panes>
+        <fx:reference source="x2" />
+        <TitledPane animated="false" text="Filter Rule">
           <content>
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
               <children>
@@ -46,30 +70,6 @@
             </AnchorPane>
           </content>
         </TitledPane>
-      </expandedPane>
-      <panes>
-        <TitledPane fx:id="x2" animated="false" minWidth="183.0" mnemonicParsing="true" mouseTransparent="false" pickOnBounds="false" prefHeight="523.0" prefWidth="183.0" text="Configuration">
-          <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-              <children>
-                <TextField id="scanFolder" fx:id="threshold" layoutX="3.0" layoutY="108.0" prefWidth="199.0" text="2" />
-                <Label layoutX="3.0" layoutY="87.0" text="Maximum Thread Threshold:">
-                  <font>
-                    <Font name="Arial" size="12.0" fx:id="x1" />
-                  </font>
-                </Label>
-                <TextField fx:id="scanFolder" layoutX="3.0" layoutY="26.0" prefWidth="199.0" />
-                <Label font="$x1" layoutX="3.0" layoutY="9.0" text="Scanning Folder:" />
-                <Button id="fileBrowser" fx:id="browserButton" layoutX="129.0" layoutY="53.0" mnemonicParsing="false" onAction="#onBrowserFolderButtonClick" prefHeight="21.9609375" prefWidth="71.0" text="Browser.." wrapText="false" />
-                <Label font="$x1" layoutX="3.0" layoutY="164.0" text="Builtin Filters Enabling:" />
-                <ToggleButton layoutX="137.0" layoutY="161.0" mnemonicParsing="false" selected="true" text="Enabled" />
-                <Label font="$x1" layoutX="3.0" layoutY="211.0" text="Record Succ In Report:" />
-                <ToggleButton layoutX="136.0" layoutY="208.0" mnemonicParsing="false" prefWidth="63.0" selected="true" text="Record" />
-              </children>
-            </AnchorPane>
-          </content>
-        </TitledPane>
-        <fx:reference source="x3" />
       </panes>
     </Accordion>
   </children>
