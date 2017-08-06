@@ -34,14 +34,6 @@ public class DumiGui extends Application
         FXMLLoader loader = new FXMLLoader(getClass().getResource(LAYOUT_FILE));
         initialize(primaryStage, loader.load());
 
-       /*primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-            public void handle (WindowEvent we) {
-                getController().stop();
-                System.out.println("Stage is closing");
-            }
-        });
-        */
-
         instance = this;
         controller = loader.getController();
     }
