@@ -29,39 +29,6 @@ public class ApplicationContext
     private JLanguageTool langTool = new JLanguageTool(lang);
     private List<String> acceptedPhrases = new ArrayList<String>();
     private List<FilterRule> filterRules = new ArrayList<>();
-
-    public Options getOptions()
-    {
-        return options;
-    }
-
-    public void setOptions(Options options)
-    {
-        this.options = options;
-
-        String userDictionary = this.options.getUserDictionary();
-        if (userDictionary != null && !"".equals(userDictionary))
-        {
-            addIgnoredWords(userDictionary, false);
-        }
-
-        String regexPatternRuleFile = this.options.getRegexPatternRuleFile();
-        if (regexPatternRuleFile != null && !"".equals(regexPatternRuleFile))
-        {
-            for (FilterRule filterRule : filterRules)
-            {
-                if (filterRule instanceof RegexPatternFilterRule)
-                {
-                    List<String> rules = FileUtil.getFileContent(regexPatternRuleFile);
-                    for (String rule : rules)
-                    {
-                        filterRule.addRule(rule, null);
-                    }
-                }
-            }
-        }
-    }
-
     private ResourceBundle resource;
 
     private ApplicationContext ()
@@ -70,25 +37,6 @@ public class ApplicationContext
         loadRules();
     }
 
-    public Language getLanguage()
-    {
-        return lang;
-    }
-
-    public JLanguageTool getLangTool ()
-    {
-        return langTool;
-    }
-
-    public static ApplicationContext getInstance()
-    {
-        return instance;
-    }
-
-    public List<FilterRule> getFilterRules()
-    {
-        return filterRules;
-    }
 
     private void loadRules ()
     {
@@ -155,11 +103,6 @@ public class ApplicationContext
         addIgnoredWordsToLangTool(acceptedPhrases);
     }
 
-    public List<String> getAcceptedPhrases()
-    {
-        return acceptedPhrases;
-    }
-
     private void addIgnoredWordsToLangTool (List<String> acceptedPhrases)
     {
         addIgnoredWordsToLangTool(acceptedPhrases, langTool);
@@ -208,5 +151,62 @@ public class ApplicationContext
         acceptedPhrases.addAll(ignoredWords);
 
         return ignoredWords;
+    }
+
+    public Options getOptions()
+    {
+        return options;
+    }
+
+    public void setOptions(Options options)
+    {
+        this.options = options;
+
+        String userDictionary = this.options.getUserDictionary();
+        if (userDictionary != null && !"".equals(userDictionary))
+        {
+            addIgnoredWords(userDictionary, false);
+        }
+
+        String regexPatternRuleFile = this.options.getRegexPatternRuleFile();
+        if (regexPatternRuleFile != null && !"".equals(regexPatternRuleFile))
+        {
+            for (FilterRule filterRule : filterRules)
+            {
+                if (filterRule instanceof RegexPatternFilterRule)
+                {
+                    List<String> rules = FileUtil.getFileContent(regexPatternRuleFile);
+                    for (String rule : rules)
+                    {
+                        filterRule.addRule(rule, null);
+                    }
+                }
+            }
+        }
+    }
+
+    public Language getLanguage()
+    {
+        return lang;
+    }
+
+    public JLanguageTool getLangTool ()
+    {
+        return langTool;
+    }
+
+    public static ApplicationContext getInstance()
+    {
+        return instance;
+    }
+
+    public List<FilterRule> getFilterRules()
+    {
+        return filterRules;
+    }
+
+    public List<String> getAcceptedPhrases()
+    {
+        return acceptedPhrases;
     }
 }

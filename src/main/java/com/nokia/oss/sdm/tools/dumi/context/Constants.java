@@ -13,6 +13,10 @@ public final class Constants
     public static final String propDisabedRules = "dumi.disabled.rules";
     public static final String REPORT_FILE_NAME = "dumiReport";
 
+    public static final String USER_CONF_FOLDER = "conf";
+    public static final String USER_CONF_DICTIONARY_FILE = "user_dictionary.txt";
+    public static final String USER_CONF_REGEX_PATTERN_FILE = "user_regexPattern.txt";
+
     public static final String DEFAULT_TOOL_TITLE = "Do You Mean It";
     public static final String DEFAULT_TOOL_VERSION = "1.0";
 }

@@ -41,6 +41,7 @@ public abstract class BaseFilterRule implements FilterRule
                     filterText.setText(line);
                 }
 
+                filterText.setBuiltIn(true);
                 phrases.add(filterText);
             }
         }
@@ -63,6 +64,15 @@ public abstract class BaseFilterRule implements FilterRule
         if (!exists)
         {
             phrases.add(new FilterText(text, remark));
+        }
+    }
+
+    @Override
+    public void addRule (FilterText filterText)
+    {
+        if (filterText != null)
+        {
+            addRule(filterText.getText(), filterText.getRemark());
         }
     }
 

@@ -12,6 +12,7 @@ public class FilterText
 {
     private String text;
     private String remark;
+    private boolean isBuiltIn;
 
     private StringProperty textProperty;
     private StringProperty remarkProperty;

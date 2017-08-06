@@ -1,5 +1,6 @@
 package com.nokia.oss.sdm.tools.dumi.gui.controller;
 
+import com.nokia.oss.sdm.tools.dumi.context.Constants;
 import com.nokia.oss.sdm.tools.dumi.inspector.InspectionProcessor;
 import com.nokia.oss.sdm.tools.dumi.context.ApplicationContext;
 import com.nokia.oss.sdm.tools.dumi.context.Options;
@@ -8,8 +9,9 @@ import com.nokia.oss.sdm.tools.dumi.inspector.rule.FilterRule;
 import com.nokia.oss.sdm.tools.dumi.inspector.rule.FilterText;
 import com.nokia.oss.sdm.tools.dumi.inspector.rule.PlainTextFilterRule;
 import com.nokia.oss.sdm.tools.dumi.inspector.rule.RegexPatternFilterRule;
-import com.nokia.oss.sdm.tools.dumi.inspector.splitter.PlainTextSplitter;
 
+import com.nokia.oss.sdm.tools.dumi.util.FileUtil;
+import edu.berkeley.nlp.lm.util.Logger;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,7 +25,10 @@ import org.controlsfx.control.action.Action;
 import org.controlsfx.dialog.Dialog;
 import org.controlsfx.dialog.Dialogs;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -117,6 +122,9 @@ public class DumiGuiController
                 tableView.getItems().add(filterText);
             }
         }
+
+        loadUserConf(tblIgnoredWords, Constants.USER_CONF_DICTIONARY_FILE, PlainTextFilterRule.class);
+        loadUserConf(tblRegexPatterns, Constants.USER_CONF_REGEX_PATTERN_FILE, RegexPatternFilterRule.class);
     }
 
     private Action showDialog(String title, String masthead, String message, DIALOG_TYPE type)
@@ -246,7 +254,7 @@ public class DumiGuiController
     @FXML
     public void onIgnoredWordAdd (ActionEvent event)
     {
-        showAddDialog(tblIgnoredWords, PlainTextSplitter.class);
+        showAddDialog(tblIgnoredWords, PlainTextFilterRule.class);
     }
 
     private void showAddDialog (TableView<FilterText> tableView, Class filterRuleClass)
@@ -371,16 +379,15 @@ public class DumiGuiController
     {
         if (validateInput())
         {
+            ApplicationContext.getInstance().getOptions().setThreadThreshold(Integer.valueOf(threshold.getText()));
+
             String folder = scanFolder.getText();
             Options options = ApplicationContext.getInstance().getOptions();
             options.setScanFolder(folder);
 
-            if (logViewList.getItems().size() > 1)
-            {
-                logViewList.getItems().remove(0, logViewList.getItems().size());
-            }
-
+            logViewList.getItems().remove(0, logViewList.getItems().size());
             inspector = new InspectionProcessor();
+
             new Thread(new Runnable()
             {
                 @Override
@@ -403,6 +410,95 @@ public class DumiGuiController
             startButton.setDisable(true);
             stopButton.setDisable(false);
             disableFormComponents(false);
+
+            saveUserConf();
+        }
+    }
+
+    private void loadUserConf (TableView<FilterText> tableView, String fileName, Class filterRuleClass)
+    {
+        File ruleFile = new File(Constants.USER_CONF_FOLDER + "/" + fileName);
+        if (ruleFile.exists())
+        {
+            List<String> rules = FileUtil.getFileContent(ruleFile.getPath(), false);
+            List<FilterRule> filterRules = ApplicationContext.getInstance().getFilterRules();
+            for (FilterRule filterRule : filterRules)
+            {
+                if (filterRule.getClass() == filterRuleClass)
+                {
+                    for (String rule : rules)
+                    {
+                        FilterText filterText = new FilterText();
+                        int sep = rule.lastIndexOf("#");
+                        if (sep > -1)
+                        {
+                            filterText.setText(rule.substring(0, sep));
+                            filterText.setRemark(rule.substring(sep + 1));
+                        }
+                        else
+                        {
+                            filterText.setText(rule);
+                        }
+
+                        filterRule.addRule(filterText);
+                        tableView.getItems().add(filterText);
+                    }
+                    break;
+                }
+            }
+        }
+    }
+
+    private void saveUserConf ()
+    {
+        File confFolder = new File (Constants.USER_CONF_FOLDER);
+        if (!confFolder.exists() && !confFolder.isDirectory())
+        {
+            confFolder.mkdir();
+        }
+
+        saveUserFilterRule(Constants.USER_CONF_DICTIONARY_FILE, PlainTextFilterRule.class);
+        saveUserFilterRule(Constants.USER_CONF_REGEX_PATTERN_FILE, RegexPatternFilterRule.class);
+    }
+
+    private void saveUserFilterRule (String fileName, Class filterRuleClass)
+    {
+        try
+        {
+            File ruleFile = new File(Constants.USER_CONF_FOLDER + "/" + fileName);
+            if (!ruleFile.exists())
+            {
+                ruleFile.createNewFile();
+            }
+
+            List<FilterRule> filterRules = ApplicationContext.getInstance().getFilterRules();
+            for (FilterRule filterRule : filterRules)
+            {
+                if (filterRule.getClass() == filterRuleClass)
+                {
+                    FileWriter fileWriter = new FileWriter(ruleFile, false);
+                    BufferedWriter bufferWriter = new BufferedWriter(fileWriter);
+                    List<FilterText> phrases = filterRule.getAcceptedPhrases();
+                    for (FilterText phrase : phrases)
+                    {
+                        if (!phrase.isBuiltIn())
+                        {
+                            bufferWriter.write(phrase.getText());
+                            if (phrase.getRemark() != null)
+                            {
+                                bufferWriter.write("#" + phrase.getRemark());
+                            }
+                            bufferWriter.newLine();
+                        }
+                    }
+                    bufferWriter.close();
+                    break;
+                }
+            }
+        }
+        catch (IOException ex)
+        {
+            Logger.warn("Failed to create user filter rule file: " + fileName, ex);
         }
     }
 
@@ -411,6 +507,10 @@ public class DumiGuiController
         scanFolder.setDisable(disable);
         browserButton.setDisable(disable);
         threshold.setDisable(disable);
+        ignoredWordsAdd.setDisable(disable);
+        ignoredWordsDel.setDisable(disable);
+        regexPatternAdd.setDisable(disable);
+        regexPatternDel.setDisable(disable);
     }
 
     private enum DIALOG_TYPE
