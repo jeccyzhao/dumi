@@ -34,6 +34,8 @@ iLO
 OK
 ZMVI
 Hostname
+omc#System user
+smx#Service Mix
 NetAct#OSS Terms
 VM#OSS Terms
 MF#OSS Terms
@@ -43,5 +45,6 @@ NASDA#OSS Terms
 NEAC#OSS Terms
 NEIW#OSS Terms
 common_mediations
+WAS#Websphere
 AC
 DC
