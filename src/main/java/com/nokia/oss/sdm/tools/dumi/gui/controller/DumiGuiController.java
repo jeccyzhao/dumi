@@ -452,7 +452,7 @@ public class DumiGuiController
     private void saveUserConf ()
     {
         File confFolder = new File (Constants.USER_CONF_FOLDER);
-        if (!confFolder.exists() && !confFolder.isDirectory())
+        if (!confFolder.exists() || !confFolder.isDirectory())
         {
             confFolder.mkdir();
         }

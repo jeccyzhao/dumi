@@ -11,7 +11,9 @@ public final class Constants
     public static final String propTextSplit = "dumi.plaintext.spliter";
     public static final String propThreadThreshold = "dumi.thread.threshold";
     public static final String propDisabedRules = "dumi.disabled.rules";
+
     public static final String REPORT_FILE_NAME = "dumiReport";
+    public static final String REPORT_FOLDER = "report";
 
     public static final String USER_CONF_FOLDER = "conf";
     public static final String USER_CONF_DICTIONARY_FILE = "user_dictionary.txt";
