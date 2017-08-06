@@ -20,6 +20,7 @@ DN#OSS Terms
 FQDN#OSS Terms
 csv
 WSMAN
+grep#Linux
 EAE
 CONFIG
 PXE
@@ -32,6 +33,7 @@ HPHW
 iLO
 OK
 ZMVI
+Hostname
 NetAct#OSS Terms
 VM#OSS Terms
 MF#OSS Terms

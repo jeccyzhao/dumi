@@ -46,7 +46,10 @@ public class RegexPatternFilterRule extends BaseFilterRule
             Matcher matcher = pattern.matcher(text);
             if (matcher.find())
             {
-                filteredText.add(matcher.group());
+                String matchedText = matcher.group();
+                filteredText.add(matchedText);
+
+                text = text.replace(matchedText, "#placeholder#");
             }
         }
 

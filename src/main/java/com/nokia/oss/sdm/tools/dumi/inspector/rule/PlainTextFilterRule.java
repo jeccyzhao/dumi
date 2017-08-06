@@ -36,7 +36,15 @@ public class PlainTextFilterRule extends BaseFilterRule
     @Override
     public boolean isPhraseAccepted (String text)
     {
-        return phrases.contains(text) || phrases.contains(text.toLowerCase());
+        for (FilterText filterText : phrases)
+        {
+            if (filterText.getText().equalsIgnoreCase(text))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     @Override

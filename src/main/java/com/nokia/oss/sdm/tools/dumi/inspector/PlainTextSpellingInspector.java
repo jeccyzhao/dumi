@@ -31,8 +31,9 @@ public class PlainTextSpellingInspector extends AbstractSpellingInspector
         int seed = lines.size() / threadThreshold;
         int linePerThread = seed > 0 ? seed : -1;
         int threadNum = linePerThread > 0 ? threadThreshold : 1;
-        executorService = Executors.newFixedThreadPool(threadNum);
-        futures = new ArrayList<>();
+
+        ExecutorService executorService = Executors.newFixedThreadPool(threadNum);
+        List<Future<List<Label>>> futures = new ArrayList<>();
         for (int i = 0; i < threadNum; i++)
         {
             int start = i * linePerThread;
@@ -40,6 +41,7 @@ public class PlainTextSpellingInspector extends AbstractSpellingInspector
 
             PlainTextSpellingInspectTask task = new PlainTextSpellingInspectTask(this, lines, start, end);
             futures.add(executorService.submit(task));
+            addTask(task);
         }
 
         for (Future<List<Label>> feedback : futures)

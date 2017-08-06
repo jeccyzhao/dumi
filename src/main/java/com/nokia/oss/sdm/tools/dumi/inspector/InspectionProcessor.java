@@ -16,11 +16,13 @@ import java.util.*;
  */
 public class InspectionProcessor
 {
-    private Map<String, ReportStatistics> data;
     private static final String REPORT_TEMPLATE_FILE = "report.tpl";
     private static final String[] acceptedFileExts = new String[] {".man", ".log"};
     private static final Logger LOGGER = Logger.getLogger(InspectionProcessor.class);
+
     private List<AbstractSpellingInspector> inspectors = new ArrayList<>();
+    private boolean isCancelled = false;
+    private Map<String, ReportStatistics> data;
 
     public void stop ()
     {
@@ -28,6 +30,8 @@ public class InspectionProcessor
         {
             inspector.stopTasks();
         }
+
+        isCancelled = true;
     }
 
     public void inspect (String folder, String userDictionaryFile)
@@ -43,7 +47,15 @@ public class InspectionProcessor
             data = new HashMap<String, ReportStatistics>();
             for (String file : filesToInspect)
             {
-                inspectFile(file);
+                if (!isCancelled)
+                {
+                    inspectFile(file);
+                }
+                else
+                {
+                    ApplicationContext.Logger(LOGGER, "Inspection is cancelled");
+                    break;
+                }
             }
 
             createReport(folder);

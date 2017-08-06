@@ -18,6 +18,7 @@ import org.languagetool.rules.UppercaseSentenceStartRule;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
@@ -29,8 +30,6 @@ public abstract class AbstractSpellingInspector
 {
     private static final Logger LOGGER = Logger.getLogger(AbstractSpellingInspector.class);
     protected List<InspectTask> inspectTasks = new ArrayList<>();
-    protected ExecutorService executorService;
-    protected List<Future<List<Label>>> futures;
 
     protected void addTask(InspectTask task)
     {
@@ -39,20 +38,13 @@ public abstract class AbstractSpellingInspector
 
     public void stopTasks ()
     {
-        if (futures != null)
+        Iterator<InspectTask> itor = inspectTasks.iterator();
+        while (itor.hasNext())
         {
-            for (Future<?> future : futures)
-            {
-                future.cancel(true);
-            }
+            InspectTask task = itor.next();
+            task.cancel();
+            itor.remove();
         }
-//        Iterator<InspectTask> itor = inspectTasks.iterator();
-//        while (itor.hasNext())
-//        {
-//            InspectTask task = itor.next();
-//            task.cancel();
-//            itor.remove();
-//        }
     }
 
     public TypoInspectionDataModel process (String file)

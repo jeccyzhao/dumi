@@ -86,18 +86,19 @@ public class TypoInspectionDataModel
 
         public String getRawText ()
         {
+            String tempText = rawText;
             if (errorItems.size() > 0)
             {
                 for (int i = errorItems.size() - 1; i >= 0; i--)
                 {
                     ErrorItem errorItem = errorItems.get(i);
                     String errorWord = rawText.substring(errorItem.getErrorStartPos(), errorItem.getErrorEndPos());
-                    rawText = rawText.substring(0, errorItem.getErrorStartPos()) +
-                            ("<b class='w-caution'>" + errorWord + "</b>") + rawText.substring(errorItem.getErrorEndPos());
+                    tempText = tempText.substring(0, errorItem.getErrorStartPos()) +
+                            ("<b class='w-caution'>" + errorWord + "</b>") + tempText.substring(errorItem.getErrorEndPos());
                 }
             }
 
-            return rawText;
+            return tempText;
         }
 
         @Override

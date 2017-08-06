@@ -9,6 +9,8 @@ import com.nokia.oss.sdm.tools.dumi.inspector.rule.FilterText;
 import com.nokia.oss.sdm.tools.dumi.inspector.rule.PlainTextFilterRule;
 import com.nokia.oss.sdm.tools.dumi.inspector.rule.RegexPatternFilterRule;
 import com.nokia.oss.sdm.tools.dumi.inspector.splitter.PlainTextSplitter;
+
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
@@ -16,6 +18,7 @@ import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.DirectoryChooser;
+
 import org.controlsfx.control.action.Action;
 import org.controlsfx.dialog.Dialog;
 import org.controlsfx.dialog.Dialogs;
@@ -114,15 +117,6 @@ public class DumiGuiController
                 tableView.getItems().add(filterText);
             }
         }
-
-        /*logViewList.getItems().addListener((ListChangeListener<LogEntry>) (c -> {
-            c.next();
-            final int size = logViewList.getItems().size();
-            if (size > 0)
-            {
-                logViewList.scrollTo(size - 1);
-            }
-        }));*/
     }
 
     private Action showDialog(String title, String masthead, String message, DIALOG_TYPE type)
@@ -213,13 +207,16 @@ public class DumiGuiController
     {
         if (logEntry != null)
         {
-            logViewList.getItems().add(logEntry);
+            Platform.runLater(new Runnable()
+            {
+                @Override
+                public void run()
+                {
+                    logViewList.getItems().add(logEntry);
+                    logViewList.scrollTo(logViewList.getItems().size() - 1);
+                }
+            });
         }
-    }
-
-    public void stop ()
-    {
-        inspector.stop();
     }
 
     @FXML
@@ -236,11 +233,14 @@ public class DumiGuiController
     @FXML
     public void onButtonStop(ActionEvent event)
     {
-        stop();
+        if (inspector != null)
+        {
+            inspector.stop();
+        }
 
         startButton.setDisable(false);
         stopButton.setDisable(true);
-        enableFormComponents(true);
+        disableFormComponents(false);
     }
 
     @FXML
@@ -375,9 +375,9 @@ public class DumiGuiController
             Options options = ApplicationContext.getInstance().getOptions();
             options.setScanFolder(folder);
 
-            if (logViewList.getItems() != null)
+            if (logViewList.getItems().size() > 1)
             {
-                logViewList.getItems().clear();
+                logViewList.getItems().remove(0, logViewList.getItems().size());
             }
 
             inspector = new InspectionProcessor();
@@ -387,19 +387,26 @@ public class DumiGuiController
                 public void run ()
                 {
                     inspector.inspect(options.getScanFolder(), options.getUserDictionary());
-                    stopButton.setDisable(true);
-                    startButton.setDisable(false);
-                    enableFormComponents(true);
+                    Platform.runLater(new Runnable()
+                    {
+                        @Override
+                        public void run()
+                        {
+                            stopButton.setDisable(true);
+                            startButton.setDisable(false);
+                            disableFormComponents(false);
+                        }
+                    });
                 }
             }).start();
 
             startButton.setDisable(true);
             stopButton.setDisable(false);
-            enableFormComponents(false);
+            disableFormComponents(false);
         }
     }
 
-    private void enableFormComponents(boolean disable)
+    private void disableFormComponents (boolean disable)
     {
         scanFolder.setDisable(disable);
         browserButton.setDisable(disable);

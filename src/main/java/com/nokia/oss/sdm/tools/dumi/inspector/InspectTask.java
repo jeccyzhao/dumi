@@ -5,4 +5,5 @@ package com.nokia.oss.sdm.tools.dumi.inspector;
  */
 public interface InspectTask
 {
+    void cancel();
 }

@@ -19,6 +19,7 @@ public class PlainTextSpellingInspectTask implements Callable<List<Label>>, Insp
     private final List<String> lines;
     private int start;
     private int end;
+    private boolean isCancelled = false;
 
     public PlainTextSpellingInspectTask (PlainTextSpellingInspector inspector, List<String> lines, int start, int end)
     {
@@ -41,15 +42,29 @@ public class PlainTextSpellingInspectTask implements Callable<List<Label>>, Insp
         List<Label> labels = new ArrayList<>();
         for (int i = start; i < end; i++)
         {
-            String text = lines.get(i);
-            if (text != null && !"".equals(text))
+            if (!isCancelled)
             {
-                String message = "Processing line" + i + ": " + text;
-                ApplicationContext.Logger(LOGGER, message, null);
-                labels.add(inspector.checkLine(i, text, true));
+                String text = lines.get(i);
+                if (text != null && !"".equals(text))
+                {
+                    String message = "Processing line" + i + ": " + text;
+                    ApplicationContext.Logger(LOGGER, message, null);
+                    labels.add(inspector.checkLine(i, text, true));
+                }
+            }
+            else
+            {
+                ApplicationContext.Logger(LOGGER, "Processing in thread " + Thread.currentThread().getName() +  " is cancelled ", null);
+                break;
             }
         }
 
         return labels;
+    }
+
+    @Override
+    public void cancel ()
+    {
+        isCancelled = true;
     }
 }

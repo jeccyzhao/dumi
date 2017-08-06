@@ -12,7 +12,6 @@
             <scope>runtime</scope>
         </dependencySet>
         <dependencySet>
-            <useProjectArtifact>true</useProjectArtifact>
             <outputDirectory>/lib</outputDirectory>
             <unpack>false</unpack>
             <scope>system</scope>
