@@ -1,1 +1,1 @@
-java -jar ../dumi-1.0-SNAPSHOT.jar
+java -jar ../dumi-1.5.jar

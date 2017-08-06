@@ -1,0 +1,564 @@
+[INFO ] 2017-07-24 08:28:07,920 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30900.man'
+[INFO ] 2017-07-24 08:28:08,987 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30900.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:08,989 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30901.man'
+[INFO ] 2017-07-24 08:28:09,000 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30901.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,002 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30902.man'
+[INFO ] 2017-07-24 08:28:09,010 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30902.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,013 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30903.man'
+[INFO ] 2017-07-24 08:28:09,028 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30903.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,030 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86600.man'
+[INFO ] 2017-07-24 08:28:09,044 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86600.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,049 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86601.man'
+[INFO ] 2017-07-24 08:28:09,059 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86601.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,061 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86606.man'
+[INFO ] 2017-07-24 08:28:09,070 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86606.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,072 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86609.man'
+[INFO ] 2017-07-24 08:28:09,082 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86609.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,085 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9047.man'
+[INFO ] 2017-07-24 08:28:09,093 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9047.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,095 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9069.man'
+[INFO ] 2017-07-24 08:28:09,104 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9069.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,106 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9228.man'
+[INFO ] 2017-07-24 08:28:09,113 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9228.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,117 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9229.man'
+[INFO ] 2017-07-24 08:28:09,125 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9229.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,127 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9251.man'
+[INFO ] 2017-07-24 08:28:09,135 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9251.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,138 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9252.man'
+[INFO ] 2017-07-24 08:28:09,145 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9252.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,148 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9255.man'
+[INFO ] 2017-07-24 08:28:09,161 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9255.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,167 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9256.man'
+[INFO ] 2017-07-24 08:28:09,175 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9256.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,179 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9450.man'
+[INFO ] 2017-07-24 08:28:09,188 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9450.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,190 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9451.man'
+[INFO ] 2017-07-24 08:28:09,200 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9451.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:09,202 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\100000.man'
+[INFO ] 2017-07-24 08:28:11,234 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350000.man'
+[INFO ] 2017-07-24 08:28:11,527 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350001.man'
+[INFO ] 2017-07-24 08:28:11,618 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350002.man'
+[INFO ] 2017-07-24 08:28:11,691 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350003.man'
+[INFO ] 2017-07-24 08:28:11,794 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350004.man'
+[INFO ] 2017-07-24 08:28:11,858 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350005.man'
+[INFO ] 2017-07-24 08:28:11,948 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350006.man'
+[INFO ] 2017-07-24 08:28:12,034 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350007.man'
+[INFO ] 2017-07-24 08:28:12,108 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350008.man'
+[INFO ] 2017-07-24 08:28:12,168 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350009.man'
+[INFO ] 2017-07-24 08:28:12,226 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350010.man'
+[INFO ] 2017-07-24 08:28:12,339 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350011.man'
+[INFO ] 2017-07-24 08:28:12,459 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350012.man'
+[INFO ] 2017-07-24 08:28:12,532 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350013.man'
+[INFO ] 2017-07-24 08:28:12,599 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350014.man'
+[INFO ] 2017-07-24 08:28:12,635 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350015.man'
+[INFO ] 2017-07-24 08:28:12,678 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350016.man'
+[INFO ] 2017-07-24 08:28:12,726 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350017.man'
+[INFO ] 2017-07-24 08:28:12,810 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350018.man'
+[INFO ] 2017-07-24 08:28:12,891 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350019.man'
+[INFO ] 2017-07-24 08:28:12,961 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350020.man'
+[INFO ] 2017-07-24 08:28:13,020 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350021.man'
+[INFO ] 2017-07-24 08:28:13,068 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350022.man'
+[INFO ] 2017-07-24 08:28:13,112 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350023.man'
+[INFO ] 2017-07-24 08:28:13,289 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350024.man'
+[INFO ] 2017-07-24 08:28:13,358 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350025.man'
+[INFO ] 2017-07-24 08:28:13,447 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350026.man'
+[INFO ] 2017-07-24 08:28:13,488 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350027.man'
+[INFO ] 2017-07-24 08:28:13,546 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350028.man'
+[INFO ] 2017-07-24 08:28:13,589 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350029.man'
+[INFO ] 2017-07-24 08:28:13,621 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350030.man'
+[INFO ] 2017-07-24 08:28:13,658 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350031.man'
+[INFO ] 2017-07-24 08:28:13,713 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350032.man'
+[INFO ] 2017-07-24 08:28:13,784 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350033.man'
+[INFO ] 2017-07-24 08:28:13,883 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350034.man'
+[INFO ] 2017-07-24 08:28:13,966 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350035.man'
+[INFO ] 2017-07-24 08:28:14,032 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350036.man'
+[INFO ] 2017-07-24 08:28:14,092 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350037.man'
+[INFO ] 2017-07-24 08:28:14,142 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350038.man'
+[INFO ] 2017-07-24 08:28:14,197 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350039.man'
+[INFO ] 2017-07-24 08:28:14,235 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350040.man'
+[INFO ] 2017-07-24 08:28:14,281 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350041.man'
+[INFO ] 2017-07-24 08:28:14,342 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350042.man'
+[INFO ] 2017-07-24 08:28:14,386 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350043.man'
+[INFO ] 2017-07-24 08:28:14,427 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350044.man'
+[INFO ] 2017-07-24 08:28:14,459 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350045.man'
+[INFO ] 2017-07-24 08:28:14,488 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350046.man'
+[INFO ] 2017-07-24 08:28:14,512 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350047.man'
+[INFO ] 2017-07-24 08:28:14,539 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350048.man'
+[INFO ] 2017-07-24 08:28:14,561 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-1.0\o2ml\content\amanual\350049.man'
+[INFO ] 2017-07-24 08:28:14,596 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30900.man'
+[INFO ] 2017-07-24 08:28:14,605 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30900.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,607 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30901.man'
+[INFO ] 2017-07-24 08:28:14,612 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30901.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,614 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30902.man'
+[INFO ] 2017-07-24 08:28:14,621 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30902.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,623 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30903.man'
+[INFO ] 2017-07-24 08:28:14,628 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30903.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,629 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86600.man'
+[INFO ] 2017-07-24 08:28:14,635 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86600.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,636 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86601.man'
+[INFO ] 2017-07-24 08:28:14,641 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86601.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,642 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86606.man'
+[INFO ] 2017-07-24 08:28:14,649 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86606.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,651 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86609.man'
+[INFO ] 2017-07-24 08:28:14,658 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86609.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,660 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9047.man'
+[INFO ] 2017-07-24 08:28:14,666 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9047.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,668 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9069.man'
+[INFO ] 2017-07-24 08:28:14,674 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9069.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,676 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9228.man'
+[INFO ] 2017-07-24 08:28:14,682 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9228.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,686 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9229.man'
+[INFO ] 2017-07-24 08:28:14,691 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9229.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,692 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9251.man'
+[INFO ] 2017-07-24 08:28:14,701 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9251.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,703 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9252.man'
+[INFO ] 2017-07-24 08:28:14,710 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9252.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,712 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9255.man'
+[INFO ] 2017-07-24 08:28:14,719 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9255.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,720 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9256.man'
+[INFO ] 2017-07-24 08:28:14,729 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9256.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,732 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9450.man'
+[INFO ] 2017-07-24 08:28:14,740 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9450.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,742 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9451.man'
+[INFO ] 2017-07-24 08:28:14,746 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9451.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:14,748 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\100000.man'
+[INFO ] 2017-07-24 08:28:14,770 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350000.man'
+[INFO ] 2017-07-24 08:28:14,812 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350001.man'
+[INFO ] 2017-07-24 08:28:14,866 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350002.man'
+[INFO ] 2017-07-24 08:28:14,915 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350003.man'
+[INFO ] 2017-07-24 08:28:14,971 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350004.man'
+[INFO ] 2017-07-24 08:28:15,004 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350005.man'
+[INFO ] 2017-07-24 08:28:15,063 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350006.man'
+[INFO ] 2017-07-24 08:28:15,111 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350007.man'
+[INFO ] 2017-07-24 08:28:15,168 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350008.man'
+[INFO ] 2017-07-24 08:28:15,219 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350009.man'
+[INFO ] 2017-07-24 08:28:15,259 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350010.man'
+[INFO ] 2017-07-24 08:28:15,312 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350011.man'
+[INFO ] 2017-07-24 08:28:15,358 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350012.man'
+[INFO ] 2017-07-24 08:28:15,414 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350013.man'
+[INFO ] 2017-07-24 08:28:15,476 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350014.man'
+[INFO ] 2017-07-24 08:28:15,503 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350015.man'
+[INFO ] 2017-07-24 08:28:15,540 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350016.man'
+[INFO ] 2017-07-24 08:28:15,579 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350017.man'
+[INFO ] 2017-07-24 08:28:15,686 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350018.man'
+[INFO ] 2017-07-24 08:28:15,728 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350019.man'
+[INFO ] 2017-07-24 08:28:15,784 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350020.man'
+[INFO ] 2017-07-24 08:28:15,834 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350021.man'
+[INFO ] 2017-07-24 08:28:15,884 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350022.man'
+[INFO ] 2017-07-24 08:28:15,927 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350023.man'
+[INFO ] 2017-07-24 08:28:16,009 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350024.man'
+[INFO ] 2017-07-24 08:28:16,047 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350025.man'
+[INFO ] 2017-07-24 08:28:16,103 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350026.man'
+[INFO ] 2017-07-24 08:28:16,134 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350027.man'
+[INFO ] 2017-07-24 08:28:16,173 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350028.man'
+[INFO ] 2017-07-24 08:28:16,202 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350029.man'
+[INFO ] 2017-07-24 08:28:16,234 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350030.man'
+[INFO ] 2017-07-24 08:28:16,293 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350031.man'
+[INFO ] 2017-07-24 08:28:16,347 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350032.man'
+[INFO ] 2017-07-24 08:28:16,411 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350033.man'
+[INFO ] 2017-07-24 08:28:16,450 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350034.man'
+[INFO ] 2017-07-24 08:28:16,517 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350035.man'
+[INFO ] 2017-07-24 08:28:16,573 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350036.man'
+[INFO ] 2017-07-24 08:28:16,624 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350037.man'
+[INFO ] 2017-07-24 08:28:16,670 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350038.man'
+[INFO ] 2017-07-24 08:28:16,715 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350039.man'
+[INFO ] 2017-07-24 08:28:16,763 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350040.man'
+[INFO ] 2017-07-24 08:28:16,820 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350041.man'
+[INFO ] 2017-07-24 08:28:16,862 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350042.man'
+[INFO ] 2017-07-24 08:28:16,910 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350043.man'
+[INFO ] 2017-07-24 08:28:16,959 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350044.man'
+[INFO ] 2017-07-24 08:28:16,986 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350045.man'
+[INFO ] 2017-07-24 08:28:17,017 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350046.man'
+[INFO ] 2017-07-24 08:28:17,042 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350047.man'
+[INFO ] 2017-07-24 08:28:17,077 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350048.man'
+[INFO ] 2017-07-24 08:28:17,127 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350049.man'
+[INFO ] 2017-07-24 08:28:17,166 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350257.man'
+[INFO ] 2017-07-24 08:28:17,189 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350572.man'
+[INFO ] 2017-07-24 08:28:17,209 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350573.man'
+[INFO ] 2017-07-24 08:28:17,224 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350574.man'
+[INFO ] 2017-07-24 08:28:17,240 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350575.man'
+[INFO ] 2017-07-24 08:28:17,272 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350576.man'
+[INFO ] 2017-07-24 08:28:17,310 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350577.man'
+[INFO ] 2017-07-24 08:28:17,349 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350579.man'
+[INFO ] 2017-07-24 08:28:17,369 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350580.man'
+[INFO ] 2017-07-24 08:28:17,385 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-10\o2ml\content\amanual\350581.man'
+[INFO ] 2017-07-24 08:28:17,400 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30900.man'
+[INFO ] 2017-07-24 08:28:17,410 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30900.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,411 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30901.man'
+[INFO ] 2017-07-24 08:28:17,417 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30901.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,419 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30902.man'
+[INFO ] 2017-07-24 08:28:17,425 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30902.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,427 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30903.man'
+[INFO ] 2017-07-24 08:28:17,434 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\30903.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,436 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86600.man'
+[INFO ] 2017-07-24 08:28:17,442 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86600.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,443 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86601.man'
+[INFO ] 2017-07-24 08:28:17,450 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86601.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,452 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86606.man'
+[INFO ] 2017-07-24 08:28:17,457 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86606.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,459 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86609.man'
+[INFO ] 2017-07-24 08:28:17,466 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\86609.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,467 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9047.man'
+[INFO ] 2017-07-24 08:28:17,473 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9047.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,475 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9069.man'
+[INFO ] 2017-07-24 08:28:17,480 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9069.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,486 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9228.man'
+[INFO ] 2017-07-24 08:28:17,490 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9228.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,491 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9229.man'
+[INFO ] 2017-07-24 08:28:17,497 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9229.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,500 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9251.man'
+[INFO ] 2017-07-24 08:28:17,505 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9251.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,506 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9252.man'
+[INFO ] 2017-07-24 08:28:17,511 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9252.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,513 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9255.man'
+[INFO ] 2017-07-24 08:28:17,520 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9255.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,522 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9256.man'
+[INFO ] 2017-07-24 08:28:17,527 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9256.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,530 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9450.man'
+[INFO ] 2017-07-24 08:28:17,536 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9450.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,537 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9451.man'
+[INFO ] 2017-07-24 08:28:17,542 method:com.nokia.oss.o2ml.metadata.fragment.parser.AlarmManFragmentParser.doParse(AlarmManFragmentParser.java:52)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\adaptation-unit-tests\dependency\core-1\amanual\9451.man' is discarded as 'core' is in ignored id list
+[INFO ] 2017-07-24 08:28:17,543 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\100000.man'
+[INFO ] 2017-07-24 08:28:17,565 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350000.man'
+[INFO ] 2017-07-24 08:28:17,615 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350001.man'
+[INFO ] 2017-07-24 08:28:17,661 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350002.man'
+[INFO ] 2017-07-24 08:28:17,691 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350003.man'
+[INFO ] 2017-07-24 08:28:17,740 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350004.man'
+[INFO ] 2017-07-24 08:28:17,776 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350005.man'
+[INFO ] 2017-07-24 08:28:17,801 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350006.man'
+[INFO ] 2017-07-24 08:28:17,837 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350007.man'
+[INFO ] 2017-07-24 08:28:17,873 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350008.man'
+[INFO ] 2017-07-24 08:28:17,908 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350009.man'
+[INFO ] 2017-07-24 08:28:17,990 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350010.man'
+[INFO ] 2017-07-24 08:28:18,052 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350011.man'
+[INFO ] 2017-07-24 08:28:18,099 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350012.man'
+[INFO ] 2017-07-24 08:28:18,153 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350013.man'
+[INFO ] 2017-07-24 08:28:18,205 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350014.man'
+[INFO ] 2017-07-24 08:28:18,232 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350015.man'
+[INFO ] 2017-07-24 08:28:18,268 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350016.man'
+[INFO ] 2017-07-24 08:28:18,303 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350017.man'
+[INFO ] 2017-07-24 08:28:18,350 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350018.man'
+[INFO ] 2017-07-24 08:28:18,398 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350019.man'
+[INFO ] 2017-07-24 08:28:18,448 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350020.man'
+[INFO ] 2017-07-24 08:28:18,484 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350021.man'
+[INFO ] 2017-07-24 08:28:18,516 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350022.man'
+[INFO ] 2017-07-24 08:28:18,545 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350023.man'
+[INFO ] 2017-07-24 08:28:18,604 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350024.man'
+[INFO ] 2017-07-24 08:28:18,637 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350025.man'
+[INFO ] 2017-07-24 08:28:18,694 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350026.man'
+[INFO ] 2017-07-24 08:28:18,726 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350027.man'
+[INFO ] 2017-07-24 08:28:18,772 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350028.man'
+[INFO ] 2017-07-24 08:28:18,800 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350029.man'
+[INFO ] 2017-07-24 08:28:18,819 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350030.man'
+[INFO ] 2017-07-24 08:28:18,847 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350031.man'
+[INFO ] 2017-07-24 08:28:18,886 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350032.man'
+[INFO ] 2017-07-24 08:28:18,939 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350033.man'
+[INFO ] 2017-07-24 08:28:18,968 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350034.man'
+[INFO ] 2017-07-24 08:28:19,020 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350035.man'
+[INFO ] 2017-07-24 08:28:19,066 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350036.man'
+[INFO ] 2017-07-24 08:28:19,103 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350037.man'
+[INFO ] 2017-07-24 08:28:19,134 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350038.man'
+[INFO ] 2017-07-24 08:28:19,170 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350039.man'
+[INFO ] 2017-07-24 08:28:19,198 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350040.man'
+[INFO ] 2017-07-24 08:28:19,230 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350041.man'
+[INFO ] 2017-07-24 08:28:19,259 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350042.man'
+[INFO ] 2017-07-24 08:28:19,294 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350043.man'
+[INFO ] 2017-07-24 08:28:19,327 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350044.man'
+[INFO ] 2017-07-24 08:28:19,349 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350045.man'
+[INFO ] 2017-07-24 08:28:19,369 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350046.man'
+[INFO ] 2017-07-24 08:28:19,386 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350047.man'
+[INFO ] 2017-07-24 08:28:19,411 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350048.man'
+[INFO ] 2017-07-24 08:28:19,431 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350049.man'
+[INFO ] 2017-07-24 08:28:19,460 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350257.man'
+[INFO ] 2017-07-24 08:28:19,479 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350572.man'
+[INFO ] 2017-07-24 08:28:19,493 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350573.man'
+[INFO ] 2017-07-24 08:28:19,508 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350574.man'
+[INFO ] 2017-07-24 08:28:19,522 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350575.man'
+[INFO ] 2017-07-24 08:28:19,562 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350576.man'
+[INFO ] 2017-07-24 08:28:19,609 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350577.man'
+[INFO ] 2017-07-24 08:28:19,652 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350579.man'
+[INFO ] 2017-07-24 08:28:19,670 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350580.man'
+[INFO ] 2017-07-24 08:28:19,687 method:com.nokia.oss.sdm.tools.dumi.inspector.AbstractSpellingInspector.process(AbstractSpellingInspector.java:24)
+Processing file 'D:\Workspace\SVN\adaptations\com.nsn.hp.hphw\com.nsn.hp.hphw-9.5\o2ml\content\amanual\350581.man'
+[INFO ] 2017-07-24 08:28:20,029 method:com.nokia.oss.sdm.tools.dumi.report.ReportBuilder.buildReport(ReportBuilder.java:42)
+Report file is created as 'dumiReport_20170724082819.html'
