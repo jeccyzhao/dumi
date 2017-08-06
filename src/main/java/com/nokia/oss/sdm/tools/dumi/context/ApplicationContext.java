@@ -37,12 +37,10 @@ public class ApplicationContext
         loadRules();
     }
 
-
     private void loadRules ()
     {
-        filterRules.add(new PlainTextFilterRule());
         filterRules.add(new RegexPatternFilterRule());
-
+        filterRules.add(new PlainTextFilterRule());
         for (FilterRule rule : filterRules)
         {
             rule.loadRule();

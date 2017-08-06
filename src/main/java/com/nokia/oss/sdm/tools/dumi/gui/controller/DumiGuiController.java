@@ -409,7 +409,7 @@ public class DumiGuiController
 
             startButton.setDisable(true);
             stopButton.setDisable(false);
-            disableFormComponents(false);
+            disableFormComponents(true);
 
             saveUserConf();
         }

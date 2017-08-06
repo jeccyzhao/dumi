@@ -44,11 +44,10 @@ public class RegexPatternFilterRule extends BaseFilterRule
             String regex = filterText.getText();
             Pattern pattern = Pattern.compile(regex);
             Matcher matcher = pattern.matcher(text);
-            if (matcher.find())
+            while (matcher.find())
             {
                 String matchedText = matcher.group();
                 filteredText.add(matchedText);
-
                 text = text.replace(matchedText, "#placeholder#");
             }
         }
