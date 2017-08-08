@@ -103,7 +103,7 @@ public abstract class AbstractSpellingInspector
 
     protected List<ErrorItem> inspectText (String text) throws IOException
     {
-        return inspectText(text, new JLanguageTool(ApplicationContext.getInstance().getLanguage()), false, 0);
+        return inspectText(text, ApplicationContext.getInstance().getLangTool(), false, 0);
     }
 
     protected List<ErrorItem> inspectText (String rawText, final JLanguageTool languageTool, boolean transform, int fromPos) throws IOException
@@ -112,13 +112,13 @@ public abstract class AbstractSpellingInspector
         if (rawText != null && !"".equals(rawText))
         {
             String transformedText = rawText;
+
             Transformation transformation = null;
             if (transform)
             {
                 transformation = new TextTransformation(rawText, ApplicationContext.getInstance().getFilterRules());
                 transformedText = transformation.transform(rawText);
             }
-
             List<RuleMatch> matches = languageTool.check(transformedText.toLowerCase());
             if (matches.size() > 0)
             {
@@ -134,6 +134,11 @@ public abstract class AbstractSpellingInspector
         }
 
         return errorItems;
+    }
+
+    private boolean isTextIdentified (RuleMatch rule)
+    {
+        return !rule.getRule().getId().equals("PHRASE_REPETITION");
     }
 
     private ErrorItem makeErrorItem (final RuleMatch ruleMatch, String errorWord,
@@ -189,29 +194,36 @@ public abstract class AbstractSpellingInspector
             int fromPos = ruleMatch.getFromPos();
             int toPos = ruleMatch.getToPos();
             String errorWord = transformedText.substring(fromPos, toPos);
-            List<String> identifiers = IdentifierSplitter.getInstance().split(errorWord, TextRange.allOf(errorWord));
-            if (identifiers.size() > 1)
-            {
-                for (String identifier : identifiers)
-                {
-                    try
-                    {
-                        int deltaIndex = 0;
-                        if (transformation != null)
-                        {
-                            deltaIndex = transformation.getDeltaIndex(errorWord, transformedText);
-                        }
 
-                        errorItems.addAll(inspectText(identifier, languageTool, false,
-                                fromPos + deltaIndex + errorWord.indexOf(identifier) + rawText.indexOf(transformedText)));
-                    }
-                    catch (IOException e)
+            boolean splitted = false;
+            if (isTextIdentified(ruleMatch))
+            {
+                List<String> identifiers = IdentifierSplitter.getInstance().split(errorWord, TextRange.allOf(errorWord));
+                if (identifiers.size() > 1)
+                {
+                    splitted = true;
+                    for (String identifier : identifiers)
                     {
-                        LOGGER.error("Failed to process word '" + identifier + "'", e);
+                        try
+                        {
+                            int deltaIndex = 0;
+                            if (transformation != null)
+                            {
+                                deltaIndex = transformation.getDeltaIndex(errorWord, transformedText);
+                            }
+
+                            errorItems.addAll(inspectText(identifier, languageTool, false,
+                                    fromPos + deltaIndex + errorWord.indexOf(identifier) + rawText.indexOf(transformedText)));
+                        }
+                        catch (IOException e)
+                        {
+                            LOGGER.error("Failed to process word '" + identifier + "'", e);
+                        }
                     }
                 }
             }
-            else
+
+            if (!splitted)
             {
                 ErrorItem errorItem = makeErrorItem(ruleMatch, errorWord, rawText, transformedText, from, transformation);
                 if (errorItem != null)

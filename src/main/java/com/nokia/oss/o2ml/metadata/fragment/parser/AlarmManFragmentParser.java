@@ -70,8 +70,12 @@ public class AlarmManFragmentParser extends AbstractXmlParser
             manPageFragment.setPatchLevel(evaluateAttributeValue(rootNode, "patchLevel"));
             manPageFragment.setSpecificProblem(evaluateAttributeValue(rootNode, "specificProblem"));
             manPageFragment.setPerceivedSeverityInfo(evaluateAttributeValue(rootNode, "perceivedSeverityInfo"));
-            manPageFragment.setAdaptationId(commonFragment.getAdaptationId());
-            manPageFragment.setAdaptationRelease(commonFragment.getAdaptationRelease());
+
+            if (commonFragment != null)
+            {
+                manPageFragment.setAdaptationId(commonFragment.getAdaptationId());
+                manPageFragment.setAdaptationRelease(commonFragment.getAdaptationRelease());
+            }
 
             return manPageFragment;
         }
@@ -100,11 +104,14 @@ public class AlarmManFragmentParser extends AbstractXmlParser
                 }
 
                 String commonFilePath = targetDir + File.separator + commonFileName;
-                CommonFragmentParser commonFragmentParser = new CommonFragmentParser();
-                BaseFragment commonFragment = commonFragmentParser.parse(commonFilePath);
-                if (commonFragment != null)
+                if (new File(commonFilePath).exists())
                 {
-                    return commonFragment;
+                    CommonFragmentParser commonFragmentParser = new CommonFragmentParser();
+                    BaseFragment commonFragment = commonFragmentParser.parse(commonFilePath);
+                    if (commonFragment != null)
+                    {
+                        return commonFragment;
+                    }
                 }
             }
         }

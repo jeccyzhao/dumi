@@ -35,6 +35,7 @@ public class ApplicationContext
     {
         loadAssembly();
         loadRules();
+        initLangTool(langTool);
     }
 
     private void loadRules ()
@@ -179,6 +180,19 @@ public class ApplicationContext
                         filterRule.addRule(rule, null);
                     }
                 }
+            }
+        }
+    }
+
+    public void initLangTool(JLanguageTool languageTool)
+    {
+        String disabeldRules = getProperty(Constants.propDisabedRules);
+        if (disabeldRules != null && !"".equals(disabeldRules))
+        {
+            String[] ruleIds = disabeldRules.split(",");
+            for (String ruleId : ruleIds)
+            {
+                languageTool.disableRule(ruleId);
             }
         }
     }

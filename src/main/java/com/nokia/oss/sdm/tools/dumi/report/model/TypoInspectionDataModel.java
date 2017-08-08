@@ -1,6 +1,7 @@
 package com.nokia.oss.sdm.tools.dumi.report.model;
 
 import lombok.Data;
+import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.util.*;
@@ -11,6 +12,8 @@ import java.util.*;
 @Data
 public class TypoInspectionDataModel
 {
+    private static Logger LOGGER = Logger.getLogger(TypoInspectionDataModel.class);
+
     private String category;
     private String filePath;
     private String fileName;
@@ -87,15 +90,22 @@ public class TypoInspectionDataModel
         public String getRawText ()
         {
             String tempText = rawText;
-            if (errorItems.size() > 0)
+            try
             {
-                for (int i = errorItems.size() - 1; i >= 0; i--)
+                if (errorItems.size() > 0)
                 {
-                    ErrorItem errorItem = errorItems.get(i);
-                    String errorWord = rawText.substring(errorItem.getErrorStartPos(), errorItem.getErrorEndPos());
-                    tempText = tempText.substring(0, errorItem.getErrorStartPos()) +
-                            ("<b class='w-caution'>" + errorWord + "</b>") + tempText.substring(errorItem.getErrorEndPos());
+                    for (int i = errorItems.size() - 1; i >= 0; i--)
+                    {
+                        ErrorItem errorItem = errorItems.get(i);
+                        String errorWord = rawText.substring(errorItem.getErrorStartPos(), errorItem.getErrorEndPos());
+                        tempText = tempText.substring(0, errorItem.getErrorStartPos()) +
+                                ("<b class='w-caution'>" + errorWord + "</b>") + tempText.substring(errorItem.getErrorEndPos());
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                LOGGER.error("Failed to get raw text (" + rawText + "), errorItems (" +errorItems + ")");
             }
 
             return tempText;

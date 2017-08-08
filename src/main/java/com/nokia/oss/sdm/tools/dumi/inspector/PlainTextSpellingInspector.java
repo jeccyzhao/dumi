@@ -95,16 +95,7 @@ public class PlainTextSpellingInspector extends AbstractSpellingInspector
     public Label checkLine (int lineNum, String line, boolean transform)
     {
         JLanguageTool languageTool = new JLanguageTool(ApplicationContext.getInstance().getLanguage());
-        String disabeldRules = ApplicationContext.getInstance().getProperty(Constants.propDisabedRules);
-        if (disabeldRules != null && !"".equals(disabeldRules))
-        {
-            String[] ruleIds = disabeldRules.split(",");
-            for (String ruleId : ruleIds)
-            {
-                languageTool.disableRule(ruleId);
-            }
-        }
-
+        ApplicationContext.getInstance().initLangTool(languageTool);
         ApplicationContext.getInstance().addIgnoredWordsToLangTool(languageTool);
         return checkLine(lineNum, line, languageTool, transform);
     }
