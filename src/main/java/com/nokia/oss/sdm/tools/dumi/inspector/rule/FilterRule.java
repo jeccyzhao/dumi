@@ -15,6 +15,7 @@ public interface FilterRule
     boolean isPhraseAccepted (String text);
     void addRule (String text, String remark);
     void addRule (FilterText filterText);
+    void addRules (List<FilterText> filterTexts);
     void removeRule (String text);
     List<String> filterText (String text);
 }

@@ -173,7 +173,7 @@ public abstract class AbstractSpellingInspector
             errorItem = new ErrorItem();
             int prefixLen = rawText.indexOf(transformedText);
             prefixLen = prefixLen > -1 ? prefixLen : 0;
-            int deltaIndex = transformation != null ? transformation.getDeltaIndex(errorWord, transformedText) : 0;
+            int deltaIndex = transformation != null ? transformation.getDeltaIndex(errorWord, fromPos, transformedText) : 0;
             errorItem.setErrorStartPos(fromPos + prefixLen + from + deltaIndex);
             errorItem.setErrorEndPos(toPos + prefixLen + from + deltaIndex);
             errorItem.setErrorDescription(ruleMatch.getMessage());
@@ -209,7 +209,7 @@ public abstract class AbstractSpellingInspector
                             int deltaIndex = 0;
                             if (transformation != null)
                             {
-                                deltaIndex = transformation.getDeltaIndex(errorWord, transformedText);
+                                deltaIndex = transformation.getDeltaIndex(errorWord, fromPos, transformedText);
                             }
 
                             errorItems.addAll(inspectText(identifier, languageTool, false,

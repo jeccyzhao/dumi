@@ -1,3 +1,0 @@
-\w+\-\w+#FQDN
-[a-zA-Z]+\.[^\s|^(]+#java package
-(\w+\.java\:\d+)#java file

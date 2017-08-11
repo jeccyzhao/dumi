@@ -29,5 +29,5 @@ public interface Transformation
         return result;
     }
 
-    int getDeltaIndex (String word, String transformedText);
+    int getDeltaIndex (String word, int from, String transformedText);
 }

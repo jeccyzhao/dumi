@@ -76,6 +76,18 @@ public abstract class BaseFilterRule implements FilterRule
         }
     }
 
+    @Override
+    public void addRules (List<FilterText> filterTexts)
+    {
+        if (filterTexts != null)
+        {
+            for (FilterText filterText : filterTexts)
+            {
+                addRule(filterText);
+            }
+        }
+    }
+
     private FilterText getByText (String text)
     {
         if (phrases != null)

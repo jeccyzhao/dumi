@@ -48,19 +48,21 @@ public class TextTransformation implements Transformation
     }
 
     @Override
-    public int getDeltaIndex (String word, String transformedText)
+    public int getDeltaIndex (String word, int fromPos, String transformedText)
     {
         int deltaIndex = 0;
-        int wordPos = transformedText.indexOf(word);
+        int wordPos = fromPos > -1 ? fromPos : transformedText.indexOf(word);
+        String tempText = transformedText;
         for (int placeHolderIndex : placeHolders.keySet())
         {
             String placeHolderText = makePlaceholder(placeHolderIndex);
-            int placeHolderPos = transformedText.indexOf(placeHolderText);
+            int placeHolderPos = tempText.indexOf(placeHolderText);
             if (wordPos > placeHolderPos)
             {
                 String rawStr = placeHolders.get(placeHolderIndex);
                 wordPos = rawStr.length() + wordPos;
                 deltaIndex += rawStr.length() - placeHolderText.length();
+                tempText = tempText.replace(placeHolderText, rawStr);
             }
         }
 

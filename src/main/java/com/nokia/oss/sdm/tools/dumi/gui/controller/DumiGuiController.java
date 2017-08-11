@@ -31,6 +31,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.logging.Filter;
 
 /**
  * Created by x36zhao on 2017/8/3.
@@ -123,8 +124,8 @@ public class DumiGuiController
             }
         }
 
-        loadUserConf(tblIgnoredWords, Constants.USER_CONF_DICTIONARY_FILE, PlainTextFilterRule.class);
-        loadUserConf(tblRegexPatterns, Constants.USER_CONF_REGEX_PATTERN_FILE, RegexPatternFilterRule.class);
+        loadUserConf(tblIgnoredWords, PlainTextFilterRule.class);
+        loadUserConf(tblRegexPatterns, RegexPatternFilterRule.class);
     }
 
     private Action showDialog(String title, String masthead, String message, DIALOG_TYPE type)
@@ -415,36 +416,17 @@ public class DumiGuiController
         }
     }
 
-    private void loadUserConf (TableView<FilterText> tableView, String fileName, Class filterRuleClass)
+    private void loadUserConf (TableView<FilterText> tableView, Class filterRuleClass)
     {
-        File ruleFile = new File(Constants.USER_CONF_FOLDER + "/" + fileName);
-        if (ruleFile.exists())
+        List<FilterRule> filterRules = ApplicationContext.getInstance().getFilterRules();
+        for (FilterRule filterRule : filterRules)
         {
-            List<String> rules = FileUtil.getFileContent(ruleFile.getPath(), false);
-            List<FilterRule> filterRules = ApplicationContext.getInstance().getFilterRules();
-            for (FilterRule filterRule : filterRules)
+            if (filterRule.getClass() == filterRuleClass)
             {
-                if (filterRule.getClass() == filterRuleClass)
-                {
-                    for (String rule : rules)
-                    {
-                        FilterText filterText = new FilterText();
-                        int sep = rule.lastIndexOf("#");
-                        if (sep > -1)
-                        {
-                            filterText.setText(rule.substring(0, sep));
-                            filterText.setRemark(rule.substring(sep + 1));
-                        }
-                        else
-                        {
-                            filterText.setText(rule);
-                        }
+                for (FilterText filterText : filterRule.getAcceptedPhrases())
+                    tableView.getItems().add(filterText);
 
-                        filterRule.addRule(filterText);
-                        tableView.getItems().add(filterText);
-                    }
-                    break;
-                }
+                break;
             }
         }
     }

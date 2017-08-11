@@ -1,0 +1,50 @@
+O&M#OSS Terms
+NSN#Nokia
+OSS#OSS Terms
+SNMP
+FM#OSS Terms
+PM#OSS Terms
+JMS
+XML
+NMS#OSS Terms
+WERLOG
+EMS
+NE#OSS Terms
+JAVA
+PLMN#OSS Terms
+MPM#OSS Terms
+MML
+NEs#OSS Terms
+MSC
+DN#OSS Terms
+FQDN#OSS Terms
+csv
+WSMAN
+grep#Linux
+EAE
+CONFIG
+PXE
+IO
+SYSLOG
+FlexFabric
+Cmdr
+GRP
+HPHW
+iLO
+OK
+ZMVI
+Hostname
+omc#System user
+smx#Service Mix
+NetAct#OSS Terms
+VM#OSS Terms
+MF#OSS Terms
+TLS#OSS Terms
+MO#OSS Terms
+NASDA#OSS Terms
+NEAC#OSS Terms
+NEIW#OSS Terms
+common_mediations
+WAS#Websphere
+AC
+DC

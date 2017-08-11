@@ -1,6 +1,7 @@
 package com.nokia.oss.sdm.tools.dumi.context;
 
 import com.nokia.oss.sdm.tools.dumi.inspector.rule.FilterRule;
+import com.nokia.oss.sdm.tools.dumi.inspector.rule.FilterText;
 import com.nokia.oss.sdm.tools.dumi.inspector.rule.PlainTextFilterRule;
 import com.nokia.oss.sdm.tools.dumi.inspector.rule.RegexPatternFilterRule;
 import com.nokia.oss.sdm.tools.dumi.gui.DumiGui;
@@ -13,9 +14,11 @@ import org.languagetool.rules.Rule;
 import org.languagetool.rules.spelling.SpellingCheckRule;
 import org.apache.log4j.Logger;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Filter;
 
 /**
  * Created by x36zhao on 2017/7/23.
@@ -45,7 +48,35 @@ public class ApplicationContext
         for (FilterRule rule : filterRules)
         {
             rule.loadRule();
+            rule.addRules(loadUserRules(rule.getClass() == RegexPatternFilterRule.class ?
+                    Constants.USER_CONF_REGEX_PATTERN_FILE : Constants.USER_CONF_DICTIONARY_FILE));
         }
+    }
+
+    private List<FilterText> loadUserRules(String userRuleFile)
+    {
+        List<FilterText> filterTexts = new ArrayList<>();
+        File ruleFile = new File(Constants.USER_CONF_FOLDER + "/" + userRuleFile);
+        if (ruleFile.exists())
+        {
+            List<String> rules = FileUtil.getFileContent(ruleFile.getPath(), false);
+            for (String rule : rules)
+            {
+                FilterText filterText = new FilterText();
+                int sep = rule.lastIndexOf("#");
+                if (sep > -1)
+                {
+                    filterText.setText(rule.substring(0, sep));
+                    filterText.setRemark(rule.substring(sep + 1));
+                } else
+                {
+                    filterText.setText(rule);
+                }
+                filterTexts.add(filterText);
+            }
+        }
+
+        return filterTexts;
     }
 
     public static void Logger (final Logger logger, String message)
