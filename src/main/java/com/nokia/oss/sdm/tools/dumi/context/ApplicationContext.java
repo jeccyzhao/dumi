@@ -68,10 +68,12 @@ public class ApplicationContext
                 {
                     filterText.setText(rule.substring(0, sep));
                     filterText.setRemark(rule.substring(sep + 1));
-                } else
+                }
+                else
                 {
                     filterText.setText(rule);
                 }
+
                 filterTexts.add(filterText);
             }
         }

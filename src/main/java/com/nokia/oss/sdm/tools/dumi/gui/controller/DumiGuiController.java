@@ -123,9 +123,6 @@ public class DumiGuiController
                 tableView.getItems().add(filterText);
             }
         }
-
-        loadUserConf(tblIgnoredWords, PlainTextFilterRule.class);
-        loadUserConf(tblRegexPatterns, RegexPatternFilterRule.class);
     }
 
     private Action showDialog(String title, String masthead, String message, DIALOG_TYPE type)
